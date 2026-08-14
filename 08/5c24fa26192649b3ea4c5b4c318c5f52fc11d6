@@ -1,0 +1,14 @@
+docs/handoff-2026-08-14-recovery-and-db-setup.md
+  h_709d285d7429c5 1-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "085c24fa26192649b3ea4c5b4c318c5f52fc11d6",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
