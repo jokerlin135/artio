@@ -1,0 +1,264 @@
+import 'package:artio/core/config/env_config.dart';
+import 'package:artio/core/constants/app_constants.dart';
+import 'package:artio/core/exceptions/app_exception.dart';
+import 'package:artio/core/providers/supabase_provider.dart';
+import 'package:artio/features/auth/domain/entities/user_model.dart';
+import 'package:artio/features/auth/domain/repositories/i_auth_repository.dart';
+import 'package:artio/utils/logger_service.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' hide AuthException;
+
+part 'auth_repository.g.dart';
+
+@riverpod
+AuthRepository authRepository(Ref ref) {
+  return AuthRepository(ref.watch(supabaseClientProvider));
+}
+
+class AuthRepository implements IAuthRepository {
+  const AuthRepository(this._supabase);
+  final SupabaseClient _supabase;
+
+  @override
+  Stream<AuthState> get onAuthStateChange => _supabase.auth.onAuthStateChange;
+
+  @override
+  User? get currentUser => _supabase.auth.currentUser;
+  @override
+  Session? get currentSession => _supabase.auth.currentSession;
+
+  @override
+  Future<UserModel> signInWithEmail(String email, String password) async {
+    try {
+      final response = await _supabase.auth.signInWithPassword(
+        email: email,
+        password: password,
+      );
+      if (response.user == null) {
+        throw const AppException.auth(message: 'Sign in failed');
+      }
+      await _revenuecatLogIn(response.user!.id);
+      final profile = await _fetchUserProfile(response.user!.id);
+      return UserModel.fromSupabaseUser(response.user!, profile: profile);
+    } on AppException {
+      rethrow;
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<UserModel> signUpWithEmail(String email, String password) async {
+    try {
+      final response = await _supabase.auth.signUp(
+        email: email,
+        password: password,
+      );
+      if (response.user == null) {
+        throw const AppException.auth(message: 'Sign up failed');
+      }
+      // Create profile BEFORE RevenueCat login so the UPDATE in
+      // _revenuecatLogIn finds an existing row to write revenuecat_app_user_id.
+      await _createUserProfile(response.user!.id, email);
+      await _revenuecatLogIn(response.user!.id);
+      return UserModel.fromSupabaseUser(response.user!);
+    } on AppException {
+      rethrow;
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<void> signInWithGoogle() async {
+    try {
+      await _supabase.auth.signInWithOAuth(
+        OAuthProvider.google,
+        redirectTo: kIsWeb ? null : AppConstants.loginCallback,
+      );
+    } on AuthException catch (e) {
+      if (e.message.contains('canceled') || e.message.contains('cancelled')) {
+        return;
+      }
+      throw AppException.auth(message: e.message);
+    } catch (e) {
+      if (e.toString().contains('canceled') ||
+          e.toString().contains('cancelled')) {
+        return;
+      }
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<void> signInWithApple() async {
+    try {
+      await _supabase.auth.signInWithOAuth(
+        OAuthProvider.apple,
+        redirectTo: AppConstants.loginCallback,
+      );
+    } on AuthException catch (e) {
+      if (e.message.contains('canceled') || e.message.contains('cancelled')) {
+        return;
+      }
+      throw AppException.auth(message: e.message);
+    } catch (e) {
+      if (e.toString().contains('canceled') ||
+          e.toString().contains('cancelled')) {
+        return;
+      }
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<void> signOut() async {
+    await _supabase.auth.signOut();
+    await _revenuecatLogOut();
+  }
+
+  @override
+  Future<void> deleteAccount() async {
+    try {
+      await _supabase.functions.invoke('delete-account');
+      // Clear local session so the app does not enter "ghost login" state on next
+      // launch. Edge function already deleted the auth user server-side; ignoring
+      // signOut errors here is intentional — the account is gone regardless.
+      try {
+        await _supabase.auth.signOut();
+      } on Object catch (e) {
+        Log.w('signOut after deleteAccount failed (non-blocking): $e');
+      }
+      await _revenuecatLogOut();
+    } on FunctionException catch (e) {
+      throw AppException.auth(
+        message: e.details?.toString() ?? 'Failed to delete account',
+      );
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<void> resetPassword(String email) async {
+    try {
+      await _supabase.auth.resetPasswordForEmail(
+        email,
+        redirectTo: AppConstants.resetPasswordCallback,
+      );
+    } on AppException {
+      rethrow;
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<UserModel?> getCurrentUserWithProfile() async {
+    final user = currentUser;
+    if (user == null) return null;
+    try {
+      final profile = await _fetchUserProfile(user.id);
+      return UserModel.fromSupabaseUser(user, profile: profile);
+    } on AppException {
+      rethrow;
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  @override
+  Future<UserModel> refreshCurrentUser() async {
+    final user = currentUser;
+    if (user == null) {
+      throw const AppException.auth(message: 'No authenticated user');
+    }
+    try {
+      final profile = await _fetchUserProfile(user.id);
+      return UserModel.fromSupabaseUser(user, profile: profile);
+    } on AppException {
+      rethrow;
+    } catch (e) {
+      throw AppException.auth(message: e.toString());
+    }
+  }
+
+  Future<Map<String, dynamic>?> _fetchUserProfile(String userId) async {
+    final response = await _supabase
+        .from('profiles')
+        .select()
+        .eq('id', userId)
+        .maybeSingle();
+    return response;
+  }
+
+  @override
+  Future<Map<String, dynamic>?> fetchOrCreateProfile(User user) async {
+    var profile = await _fetchUserProfile(user.id);
+    if (profile == null) {
+      // Create profile BEFORE RevenueCat login so revenuecat_app_user_id is set.
+      await _createUserProfile(user.id, user.email ?? '');
+      profile = await _fetchUserProfile(user.id);
+    }
+    await _revenuecatLogIn(user.id);
+    return profile;
+  }
+
+  Future<void> _createUserProfile(String userId, String email) async {
+    try {
+      await _supabase.from('profiles').insert({
+        'id': userId,
+        'email': email,
+        'credits': AppConstants.defaultCredits,
+        'is_premium': false,
+        // Set immediately so RC webhook can find this user via revenuecat_app_user_id.
+        'revenuecat_app_user_id': userId,
+        'created_at': DateTime.now().toIso8601String(),
+      });
+    } on PostgrestException catch (e) {
+      if (e.code == '23505') {
+        return; // unique_violation — profile already exists
+      }
+      rethrow;
+    }
+  }
+
+  /// Link RevenueCat user identity to Supabase user ID.
+  /// Errors are logged but never block the auth flow.
+  Future<void> _revenuecatLogIn(String userId) async {
+    if (EnvConfig.revenuecatAppleKey.isEmpty &&
+        EnvConfig.revenuecatGoogleKey.isEmpty) {
+      return;
+    }
+    // Always update DB regardless of RC logIn result.
+    try {
+      await _supabase
+          .from('profiles')
+          .update({'revenuecat_app_user_id': userId})
+          .eq('id', userId);
+    } on Object catch (e) {
+      Log.w('RevenueCat DB update failed (non-blocking): $e');
+    }
+    try {
+      await Purchases.logIn(userId);
+    } on Object catch (e) {
+      Log.w('RevenueCat logIn failed (non-blocking): $e');
+    }
+  }
+
+  /// Clear RevenueCat user identity on logout.
+  Future<void> _revenuecatLogOut() async {
+    if (EnvConfig.revenuecatAppleKey.isEmpty &&
+        EnvConfig.revenuecatGoogleKey.isEmpty) {
+      return;
+    }
+    try {
+      await Purchases.logOut();
+    } on Object catch (e) {
+      Log.w('RevenueCat logOut failed (non-blocking): $e');
+    }
+  }
+}

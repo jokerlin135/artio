@@ -1,0 +1,55 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Every 4 days at 08:00 UTC (15:00 Vietnam time) — max gap always <= 4 days
+    - cron: '0 8 */4 * *'
+  workflow_dispatch: # Manual trigger from Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase Auth
+        continue-on-error: true
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 \
+            "${{ secrets.SUPABASE_URL }}/auth/v1/settings" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "Supabase Auth responded with HTTP $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "::error::Supabase Auth is not responding (HTTP $HTTP_STATUS)"
+            exit 1
+          fi
+
+      - name: Ping Supabase REST API
+        continue-on-error: true
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "Supabase REST API responded with HTTP $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ne 200 ] && [ "$HTTP_STATUS" -ne 401 ]; then
+            echo "::error::Supabase REST API is not responding (HTTP $HTTP_STATUS)"
+            exit 1
+          fi
+
+      - name: Ping Real Database (Wake up PostgreSQL Engine)
+        continue-on-error: true
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/templates?select=id&limit=1" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "Supabase Database query responded with HTTP $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ne 200 ] && [ "$HTTP_STATUS" -ne 406 ]; then
+            echo "::error::Supabase Database is not responding (HTTP $HTTP_STATUS)"
+            exit 1
+          fi
+
+      - name: Summary
+        run: echo "✅ Supabase keep-alive ping completed successfully — next run in ~4 days"
+

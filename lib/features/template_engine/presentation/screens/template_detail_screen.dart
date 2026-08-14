@@ -1,0 +1,407 @@
+import 'dart:async';
+
+import 'package:artio/core/config/sentry_config.dart';
+import 'package:artio/core/constants/ai_models.dart';
+import 'package:artio/core/design_system/app_spacing.dart';
+import 'package:artio/core/exceptions/app_exception.dart';
+import 'package:artio/core/services/image_upload_service.dart';
+import 'package:artio/core/state/auth_view_model_provider.dart';
+import 'package:artio/core/state/credit_balance_state_provider.dart';
+import 'package:artio/core/utils/app_exception_mapper.dart';
+import 'package:artio/features/auth/presentation/state/auth_state.dart';
+import 'package:artio/features/credits/presentation/widgets/insufficient_credits_sheet.dart';
+import 'package:artio/features/template_engine/domain/entities/generation_job_model.dart';
+import 'package:artio/features/template_engine/domain/entities/input_field_model.dart';
+import 'package:artio/features/template_engine/domain/entities/template_model.dart';
+import 'package:artio/features/template_engine/presentation/providers/generation_options_provider.dart';
+import 'package:artio/features/template_engine/presentation/providers/template_provider.dart';
+import 'package:artio/features/template_engine/presentation/view_models/generation_view_model.dart';
+import 'package:artio/features/template_engine/presentation/widgets/input_field_builder.dart';
+import 'package:artio/features/template_engine/presentation/widgets/template_detail_widgets.dart';
+import 'package:artio/shared/widgets/aspect_ratio_selector.dart';
+import 'package:artio/shared/widgets/image_count_dropdown.dart';
+import 'package:artio/shared/widgets/loading_state_widget.dart';
+import 'package:artio/shared/widgets/model_selector.dart';
+import 'package:artio/shared/widgets/output_format_toggle.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
+
+class TemplateDetailScreen extends ConsumerStatefulWidget {
+  const TemplateDetailScreen({required this.templateId, super.key});
+  final String templateId;
+
+  @override
+  ConsumerState<TemplateDetailScreen> createState() =>
+      _TemplateDetailScreenState();
+}
+
+class _TemplateDetailScreenState extends ConsumerState<TemplateDetailScreen> {
+  final Map<String, String> _inputValues = {};
+  final Map<String, XFile> _imageFiles = {};
+  final Set<String> _reportedErrors = <String>{};
+  final _formKey = GlobalKey<FormState>();
+  bool _isUploading = false;
+  bool _isPaymentError = false;
+  ProviderSubscription<AsyncValue<TemplateModel?>>? _templateErrorSub;
+  ProviderSubscription<AsyncValue<GenerationJobModel?>>? _jobErrorSub;
+  ProviderSubscription? _premiumSub;
+  ProviderSubscription<AsyncValue<TemplateModel?>>? _modelAutoSwitchSub;
+
+  String _buildPrompt(TemplateModel template) {
+    var prompt = template.promptTemplate;
+    for (final entry in _inputValues.entries) {
+      prompt = prompt.replaceAll('{${entry.key}}', entry.value);
+    }
+
+    // Append otherIdeas if non-empty
+    final otherIdeas = _inputValues['otherIdeas']?.trim() ?? '';
+    if (otherIdeas.isNotEmpty) {
+      prompt += '\n\nAdditional details: $otherIdeas';
+    }
+
+    return prompt;
+  }
+
+  bool _hasImageInput(TemplateModel template) =>
+      template.inputFields.any((f) => f.type == 'image');
+
+  Future<void> _handleGenerate(TemplateModel template) async {
+    final userId = ref
+        .read(authViewModelProvider)
+        .maybeMap(authenticated: (s) => s.user.id, orElse: () => null);
+
+    if (userId == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text('Please log in to generate images'),
+          action: SnackBarAction(
+            label: 'Login',
+            onPressed: () => context.go('/login'),
+          ),
+        ),
+      );
+      return;
+    }
+
+    final options = ref.read(generationOptionsProvider);
+    final prompt = _buildPrompt(template);
+
+    // Validate form inputs
+    if (!(_formKey.currentState?.validate() ?? false)) return;
+
+    // Validate required image fields
+    final missingImages = template.inputFields
+        .where((f) => f.type == 'image' && f.required)
+        .where((f) => !_imageFiles.containsKey(f.name));
+    if (missingImages.isNotEmpty) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Please select all required images')),
+        );
+      }
+      return;
+    }
+
+    // Check for unreplaced placeholders
+    final unresolved = RegExp(r'\{[a-zA-Z_]+\}').allMatches(prompt);
+    if (unresolved.isNotEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please fill in all required fields')),
+      );
+      return;
+    }
+
+    // Upload images if any (ordered by template input_fields)
+    List<String>? imageInputs;
+    if (_imageFiles.isNotEmpty) {
+      setState(() => _isUploading = true);
+      try {
+        final orderedFiles = template.inputFields
+            .where((f) => f.type == 'image' && _imageFiles.containsKey(f.name))
+            .map((f) => _imageFiles[f.name]!)
+            .toList();
+
+        imageInputs = await ref
+            .read(imageUploadServiceProvider)
+            .uploadAll(files: orderedFiles, userId: userId);
+      } on Object catch (e) {
+        if (mounted) {
+          setState(() => _isUploading = false);
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text('Upload failed: $e')));
+        }
+        return;
+      }
+      if (mounted) setState(() => _isUploading = false);
+    }
+
+    unawaited(
+      ref
+          .read(generationViewModelProvider.notifier)
+          .generate(
+            templateId: template.id,
+            prompt: prompt,
+            userId: userId,
+            aspectRatio: options.aspectRatio,
+            imageCount: options.imageCount,
+            imageInputs: imageInputs,
+            modelId: options.modelId,
+            outputFormat: options.outputFormat,
+          ),
+    );
+  }
+
+  void _captureOnce(Object error, StackTrace? stackTrace) {
+    final signature = '${error.runtimeType}:$error';
+    if (_reportedErrors.add(signature)) {
+      unawaited(SentryConfig.captureException(error, stackTrace: stackTrace));
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _templateErrorSub = ref.listenManual<AsyncValue<TemplateModel?>>(
+      templateByIdProvider(widget.templateId),
+      (previous, next) {
+        next.whenOrNull(
+          error: (error, stackTrace) {
+            _captureOnce(error, stackTrace);
+          },
+        );
+      },
+    );
+
+    _jobErrorSub = ref.listenManual<AsyncValue<GenerationJobModel?>>(
+      generationViewModelProvider,
+      (previous, next) {
+        next.whenOrNull(
+          error: (error, stackTrace) {
+            _captureOnce(error, stackTrace);
+            final isPayment = error is PaymentException;
+            if (mounted) setState(() => _isPaymentError = isPayment);
+            if (isPayment) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (mounted) _showInsufficientCreditsSheet();
+              });
+            }
+          },
+          data: (_) {
+            if (_isPaymentError && mounted) {
+              setState(() => _isPaymentError = false);
+            }
+          },
+        );
+      },
+    );
+
+    // Tag Sentry events with premium status (fires only on change)
+    _premiumSub = ref.listenManual<AuthState>(authViewModelProvider, (
+      _,
+      AuthState next,
+    ) {
+      final isPremium = next.maybeMap(
+        authenticated: (s) => s.user.isPremium,
+        orElse: () => false,
+      );
+      Sentry.configureScope(
+        (scope) => scope.setTag('isPremium', isPremium.toString()),
+      );
+    });
+
+    // Auto-switch to image-capable model when template data arrives
+    _modelAutoSwitchSub = ref.listenManual<AsyncValue<TemplateModel?>>(
+      templateByIdProvider(widget.templateId),
+      (previous, next) {
+        next.whenData((template) {
+          if (template == null) return;
+          if (!_hasImageInput(template)) return;
+          final currentModel = ref.read(generationOptionsProvider).modelId;
+          final modelObj = AiModels.getById(currentModel);
+          if (modelObj == null || !modelObj.supportsImageInput) {
+            final imageModels = AiModels.imageCapableModels;
+            if (imageModels.isNotEmpty) {
+              ref
+                  .read(generationOptionsProvider.notifier)
+                  .updateModel(imageModels.first.id);
+            }
+          }
+        });
+      },
+      fireImmediately: true,
+    );
+  }
+
+  void _showInsufficientCreditsSheet() {
+    final balance =
+        ref.read(creditBalanceNotifierProvider).valueOrNull?.balance ?? 0;
+    final modelId = ref.read(generationOptionsProvider).modelId;
+    final model = AiModels.getById(modelId);
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (_) => InsufficientCreditsSheet(
+        currentBalance: balance,
+        requiredCredits: model?.creditCost ?? 0,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _templateErrorSub?.close();
+    _jobErrorSub?.close();
+    _premiumSub?.close();
+    _modelAutoSwitchSub?.close();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final templateAsync = ref.watch(templateByIdProvider(widget.templateId));
+    final jobAsync = ref.watch(generationViewModelProvider);
+    final options = ref.watch(generationOptionsProvider);
+    final isPremium = ref
+        .watch(authViewModelProvider)
+        .maybeMap(
+          authenticated: (state) => state.user.isPremium,
+          orElse: () => false,
+        );
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Generate')),
+      body: templateAsync.when(
+        loading: () => const LoadingStateWidget(),
+        error: (e, _) => Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                AppExceptionMapper.toUserMessage(e),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.error,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: AppSpacing.md),
+              FilledButton.icon(
+                onPressed: () =>
+                    ref.invalidate(templateByIdProvider(widget.templateId)),
+                icon: const Icon(Icons.refresh_rounded, size: 18),
+                label: const Text('Try Again'),
+              ),
+            ],
+          ),
+        ),
+        data: (template) {
+          if (template == null) {
+            return const Center(child: Text('Template not found'));
+          }
+
+          return SingleChildScrollView(
+            padding: AppSpacing.screenPadding,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                TemplateDetailHeader(template: template),
+                // Template input fields
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      for (final field in template.inputFields) ...[
+                        InputFieldBuilder(
+                          field: field,
+                          onChanged: (value) =>
+                              _inputValues[field.name] = value,
+                          onImageChanged: field.type == 'image'
+                              ? (file) => setState(() {
+                                  if (file != null) {
+                                    _imageFiles[field.name] = file;
+                                  } else {
+                                    _imageFiles.remove(field.name);
+                                  }
+                                })
+                              : null,
+                          imageFile: _imageFiles[field.name],
+                        ),
+                        const SizedBox(height: AppSpacing.md),
+                      ],
+                    ],
+                  ),
+                ),
+                InputFieldBuilder(
+                  field: const InputFieldModel(
+                    name: 'otherIdeas',
+                    label: 'Other Ideas (Optional)',
+                    type: 'otherIdeas',
+                    placeholder: 'Share any additional ideas...',
+                  ),
+                  onChanged: (value) => _inputValues['otherIdeas'] = value,
+                ),
+                const SizedBox(height: AppSpacing.lg),
+                Text(
+                  'Generation Options',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: AppSpacing.md),
+                AspectRatioSelector(
+                  selectedRatio: options.aspectRatio,
+                  selectedModelId: options.modelId,
+                  onChanged: (ratio) => ref
+                      .read(generationOptionsProvider.notifier)
+                      .updateAspectRatio(ratio),
+                ),
+                const SizedBox(height: AppSpacing.md),
+                ImageCountDropdown(
+                  value: options.imageCount,
+                  onChanged: (count) => ref
+                      .read(generationOptionsProvider.notifier)
+                      .updateImageCount(count),
+                ),
+                const SizedBox(height: AppSpacing.md),
+                OutputFormatToggle(
+                  value: options.outputFormat,
+                  isPremium: isPremium,
+                  onChanged: (format) => ref
+                      .read(generationOptionsProvider.notifier)
+                      .updateOutputFormat(format),
+                ),
+                const SizedBox(height: AppSpacing.md),
+                ModelSelector(
+                  selectedModelId: options.modelId,
+                  isPremium: isPremium,
+                  onChanged: (modelId) => ref
+                      .read(generationOptionsProvider.notifier)
+                      .updateModel(modelId),
+                  filterSupportsImageInput: _hasImageInput(template)
+                      ? true
+                      : null,
+                ),
+                const SizedBox(height: AppSpacing.lg),
+                GenerationStateSection(
+                  jobAsync: jobAsync,
+                  isGenerating:
+                      _isUploading ||
+                      ref
+                          .read(generationViewModelProvider.notifier)
+                          .isGenerating,
+                  isPaymentError: _isPaymentError,
+                  onGenerate: () => unawaited(_handleGenerate(template)),
+                  onReset: () =>
+                      ref.read(generationViewModelProvider.notifier).reset(),
+                  onUpgrade: _showInsufficientCreditsSheet,
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}

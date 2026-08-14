@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+/// Opens a URL in the device browser, silently logging any failures.
+Future<void> launchUrlSafely(BuildContext context, String url) async {
+  final Uri uri;
+  try {
+    uri = Uri.parse(url);
+  } on FormatException {
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Invalid URL'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+    return;
+  }
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Could not open link'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+  }
+}
+
+/// Opens a URL in an in-app web view (no external browser).
+Future<void> launchInAppUrl(BuildContext context, String url) async {
+  final Uri uri;
+  try {
+    uri = Uri.parse(url);
+  } on FormatException {
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Invalid URL'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+    return;
+  }
+  if (!await launchUrl(uri, mode: LaunchMode.inAppWebView)) {
+    // Fall back to external browser if in-app view is not supported.
+    if (context.mounted) {
+      await launchUrlSafely(context, url);
+    }
+  }
+}
+
+/// Sends an email using the device's mail app.
+Future<void> launchEmailSafely(
+  BuildContext context, {
+  required String to,
+  String subject = '',
+  String body = '',
+}) async {
+  final uri = Uri(
+    scheme: 'mailto',
+    path: to,
+    query: [
+      if (subject.isNotEmpty) 'subject=${Uri.encodeComponent(subject)}',
+      if (body.isNotEmpty) 'body=${Uri.encodeComponent(body)}',
+    ].join('&'),
+  );
+
+  if (!await launchUrl(uri)) {
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Could not open mail app'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+  }
+}

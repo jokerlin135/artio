@@ -1,0 +1,30 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'subscription_package.freezed.dart';
+
+/// A domain-level subscription package, decoupled from RevenueCat SDK.
+@freezed
+class SubscriptionPackage with _$SubscriptionPackage {
+  const factory SubscriptionPackage({
+    /// Store product identifier (e.g., 'artio_pro_monthly').
+    required String identifier,
+
+    /// Localized price string (e.g., '$9.99/month').
+    required String priceString,
+
+    /// Raw numeric price in the user's currency (e.g., 9.99).
+    /// Used for computing savings percentages across billing periods.
+    required double price,
+
+    /// The native SDK package object (cast back in the data layer).
+    required Object nativePackage,
+
+    /// Localized introductory/trial price string, e.g. "Free for 3 days".
+    /// Null if no trial is offered for this package.
+    String? introductoryPriceString,
+
+    /// Raw numeric introductory price in the user's currency.
+    /// Null if no trial is offered for this package.
+    double? introductoryPrice,
+  }) = _SubscriptionPackage;
+}

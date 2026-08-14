@@ -1,0 +1,14 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "build/**"
+    - ".dart_tool/**"
+
+linter:
+  rules:
+    # Disable rules that conflict with existing patterns
+    public_member_api_docs: false  # Too strict for MVP
+    lines_longer_than_80_chars: false  # Allow longer lines

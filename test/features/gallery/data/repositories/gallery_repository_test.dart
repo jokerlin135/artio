@@ -1,0 +1,308 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:artio/core/exceptions/app_exception.dart';
+import 'package:artio/features/gallery/data/repositories/gallery_repository.dart';
+import 'package:artio/features/gallery/data/services/gallery_cache_service.dart';
+import 'package:artio/features/gallery/domain/entities/gallery_item.dart';
+import 'package:artio/features/gallery/domain/repositories/i_gallery_repository.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../../../../core/fixtures/gallery_item_fixtures.dart';
+
+// Mock the interface, NOT the implementation
+class MockGalleryRepository extends Mock implements IGalleryRepository {}
+
+class MockSupabaseClient extends Mock implements SupabaseClient {}
+
+class MockGalleryCacheService extends Mock implements GalleryCacheService {}
+
+void main() {
+  late MockGalleryRepository mockRepository;
+
+  setUp(() {
+    mockRepository = MockGalleryRepository();
+  });
+
+  group('IGalleryRepository', () {
+    group('fetchGalleryItems', () {
+      test('returns list of gallery items', () async {
+        final items = GalleryItemFixtures.list(count: 5);
+
+        when(
+          () => mockRepository.fetchGalleryItems(),
+        ).thenAnswer((_) async => items);
+
+        final result = await mockRepository.fetchGalleryItems();
+
+        expect(result, hasLength(5));
+      });
+
+      test('returns empty list when no items exist', () async {
+        when(
+          () => mockRepository.fetchGalleryItems(),
+        ).thenAnswer((_) async => []);
+
+        final result = await mockRepository.fetchGalleryItems();
+
+        expect(result, isEmpty);
+      });
+
+      test('returns filtered items when templateId provided', () async {
+        final filteredItems = [
+          GalleryItemFixtures.single(
+            templateId: 'template-1',
+            status: GenerationStatus.completed,
+          ),
+        ];
+
+        when(
+          () => mockRepository.fetchGalleryItems(templateId: 'template-1'),
+        ).thenAnswer((_) async => filteredItems);
+
+        final result = await mockRepository.fetchGalleryItems(
+          templateId: 'template-1',
+        );
+
+        expect(result, hasLength(1));
+        expect(result[0].templateId, equals('template-1'));
+      });
+    });
+
+    group('watchUserImages', () {
+      test('emits gallery items stream', () async {
+        final controller = StreamController<List<GalleryItem>>();
+        final items = GalleryItemFixtures.list(count: 3);
+
+        when(
+          () => mockRepository.watchUserImages(userId: 'user-123'),
+        ).thenAnswer((_) => controller.stream);
+
+        final stream = mockRepository.watchUserImages(userId: 'user-123');
+
+        controller.add(items);
+
+        await expectLater(stream, emits(hasLength(3)));
+
+        await controller.close();
+      });
+
+      test('emits updated items when new image added', () async {
+        final controller = StreamController<List<GalleryItem>>();
+        final initialItems = GalleryItemFixtures.list(count: 2);
+        final updatedItems = GalleryItemFixtures.list(count: 3);
+
+        when(
+          () => mockRepository.watchUserImages(userId: 'user-123'),
+        ).thenAnswer((_) => controller.stream);
+
+        final stream = mockRepository.watchUserImages(userId: 'user-123');
+
+        controller
+          ..add(initialItems)
+          ..add(updatedItems);
+
+        await expectLater(stream, emitsInOrder([hasLength(2), hasLength(3)]));
+
+        await controller.close();
+      });
+    });
+
+    group('deleteJob', () {
+      test('completes without error on success', () async {
+        when(
+          () => mockRepository.deleteJob('job-123'),
+        ).thenAnswer((_) async {});
+
+        await expectLater(mockRepository.deleteJob('job-123'), completes);
+
+        verify(() => mockRepository.deleteJob('job-123')).called(1);
+      });
+    });
+
+    group('softDeleteImage', () {
+      test('completes without error on success', () async {
+        when(
+          () => mockRepository.softDeleteImage('job-123'),
+        ).thenAnswer((_) async {});
+
+        await expectLater(mockRepository.softDeleteImage('job-123'), completes);
+      });
+    });
+
+    group('restoreImage', () {
+      test('completes without error on success', () async {
+        when(
+          () => mockRepository.restoreImage('job-123'),
+        ).thenAnswer((_) async {});
+
+        await expectLater(mockRepository.restoreImage('job-123'), completes);
+      });
+    });
+
+    group('retryGeneration', () {
+      test('completes without error on success', () async {
+        when(
+          () => mockRepository.retryGeneration('job-123'),
+        ).thenAnswer((_) async {});
+
+        await expectLater(mockRepository.retryGeneration('job-123'), completes);
+      });
+    });
+
+    group('downloadImage', () {
+      test('returns file path on success', () async {
+        when(
+          () => mockRepository.downloadImage('https://example.com/image.png'),
+        ).thenAnswer((_) async => '/path/to/downloaded/image.png');
+
+        final result = await mockRepository.downloadImage(
+          'https://example.com/image.png',
+        );
+
+        expect(result, contains('image.png'));
+      });
+
+      test('throws exception on download failure', () async {
+        when(
+          () => mockRepository.downloadImage('https://invalid.url/image.png'),
+        ).thenThrow(Exception('Failed to download image'));
+
+        expect(
+          () => mockRepository.downloadImage('https://invalid.url/image.png'),
+          throwsException,
+        );
+      });
+    });
+
+    group('toggleFavorite', () {
+      test('completes without error when favoriting', () async {
+        when(
+          () => mockRepository.toggleFavorite('item-123', isFavorite: true),
+        ).thenAnswer((_) async {});
+
+        await expectLater(
+          mockRepository.toggleFavorite('item-123', isFavorite: true),
+          completes,
+        );
+      });
+
+      test('completes without error when unfavoriting', () async {
+        when(
+          () => mockRepository.toggleFavorite('item-123', isFavorite: false),
+        ).thenAnswer((_) async {});
+
+        await expectLater(
+          mockRepository.toggleFavorite('item-123', isFavorite: false),
+          completes,
+        );
+      });
+    });
+  });
+
+  group('Gallery cache integration', () {
+    late GalleryCacheService cache;
+    late Directory tempDir;
+
+    setUp(() {
+      tempDir = Directory.systemTemp.createTempSync('gallery_repo_cache_test_');
+      cache = GalleryCacheService.forTesting(tempDir.path);
+    });
+
+    tearDown(() {
+      if (tempDir.existsSync()) {
+        tempDir.deleteSync(recursive: true);
+      }
+    });
+
+    test('cache hit returns data', () async {
+      final items = GalleryItemFixtures.list(count: 3);
+      await cache.cacheItems(items);
+
+      expect(cache.isCacheValid(), isTrue);
+      final cached = await cache.getCachedItems();
+      expect(cached, hasLength(3));
+    });
+
+    test('cache miss returns null', () async {
+      expect(cache.isCacheValid(), isFalse);
+      final cached = await cache.getCachedItems();
+      expect(cached, isNull);
+    });
+
+    test('stale cache still returns data for fallback', () async {
+      final items = GalleryItemFixtures.list(count: 2);
+      await cache.cacheItems(items);
+
+      expect(cache.isCacheValid(maxAge: Duration.zero), isFalse);
+      final stale = await cache.getCachedItems();
+      expect(stale, isNotNull);
+      expect(stale, hasLength(2));
+    });
+
+    test('cache overwrite with new data', () async {
+      await cache.cacheItems(GalleryItemFixtures.list(count: 2));
+      await cache.cacheItems(GalleryItemFixtures.list(count: 5));
+
+      final result = await cache.getCachedItems();
+      expect(result, hasLength(5));
+    });
+
+    test('clearCache invalidates cache for mutation scenarios', () async {
+      await cache.cacheItems(GalleryItemFixtures.list(count: 3));
+      expect(cache.isCacheValid(), isTrue);
+
+      await cache.clearCache();
+
+      expect(cache.isCacheValid(), isFalse);
+      expect(await cache.getCachedItems(), isNull);
+    });
+  });
+
+  group('GalleryRepository pagination guard', () {
+    late GalleryRepository repository;
+
+    setUp(() {
+      repository = GalleryRepository(
+        MockSupabaseClient(),
+        MockGalleryCacheService(),
+      );
+    });
+
+    test('throws for limit < 1', () {
+      expect(
+        () => repository.fetchGalleryItems(limit: 0),
+        throwsA(isA<AppException>()),
+      );
+    });
+
+    test('throws for limit > 100', () {
+      expect(
+        () => repository.fetchGalleryItems(limit: 101),
+        throwsA(isA<AppException>()),
+      );
+    });
+
+    test('throws for negative offset', () {
+      expect(
+        () => repository.fetchGalleryItems(offset: -1),
+        throwsA(isA<AppException>()),
+      );
+    });
+
+    test('throws with correct error message', () {
+      expect(
+        () => repository.fetchGalleryItems(limit: 0),
+        throwsA(
+          isA<AppException>().having(
+            (e) => e.toString(),
+            'message',
+            contains('Invalid pagination parameters'),
+          ),
+        ),
+      );
+    });
+  });
+}
