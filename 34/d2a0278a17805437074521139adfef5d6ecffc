@@ -1,0 +1,2020 @@
+.agent/workflows/test.md
+  h_709d285d7429c5 1-144
+android/settings.gradle.kts
+  h_709d285d7429c5 1-26
+.agent/agents/code-archaeologist.md
+  h_709d285d7429c5 1-106
+.agent/skills/testing-patterns/scripts/test_runner.py
+  h_709d285d7429c5 1-219
+test/features/auth/presentation/screens/login_screen_test.dart
+  h_709d285d7429c5 1-118
+Makefile
+  h_709d285d7429c5 1-88
+.agents/skills/vulnerability-scanner/checklists.md
+  h_709d285d7429c5 1-121
+.agents/skills/lint-and-validate/SKILL.md
+  h_709d285d7429c5 1-45
+.github/workflows/supabase-keepalive.yml
+  h_709d285d7429c5 1-55
+.agents/skills/analytics-tracking/references/event-library.md
+  h_709d285d7429c5 1-260
+.agents/skills/tailwind-patterns/SKILL.md
+  h_709d285d7429c5 1-269
+test/features/gallery/presentation/providers/gallery_provider_test.dart
+  h_709d285d7429c5 1-126
+lib/core/exceptions/app_exception.dart
+  h_709d285d7429c5 1-30
+docs/iap-revenuecat-production-guide-2026-03-12.md
+  h_709d285d7429c5 1-304
+.agent/.shared/ui-ux-pro-max/data/styles.csv
+  h_709d285d7429c5 1-59
+.agents/skills/app-builder/templates/nextjs-saas/TEMPLATE.md
+  h_709d285d7429c5 1-122
+lib/features/create/presentation/widgets/prompt_input_field.dart
+  h_709d285d7429c5 1-72
+.agent/skills/lint-and-validate/scripts/lint_runner.py
+  h_709d285d7429c5 1-184
+windows/runner/utils.cpp
+  h_709d285d7429c5 1-65
+ios/Runner/AppDelegate.swift
+  h_709d285d7429c5 1-16
+lib/features/gallery/presentation/providers/gallery_provider.g.dart
+  h_709d285d7429c5 1-49
+.agents/.shared/ui-ux-pro-max/data/typography.csv
+  h_709d285d7429c5 1-58
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+  h_709d285d7429c5 1-8
+.agent/skills/app-builder/tech-stack.md
+  h_709d285d7429c5 1-40
+.agents/agents/database-architect.md
+  h_709d285d7429c5 1-226
+docs/kie-api/seedream/seedream-4.5-text-to-image.md
+  h_709d285d7429c5 1-269
+lib/core/utils/app_exception_mapper.dart
+  h_709d285d7429c5 1-95
+lib/features/template_engine/data/services/template_cache_service.g.dart
+  h_709d285d7429c5 1-29
+lib/features/auth/presentation/view_models/auth_view_model.g.dart
+  h_709d285d7429c5 1-26
+.agents/agents/game-developer.md
+  h_709d285d7429c5 1-162
+lib/features/gallery/data/repositories/gallery_repository_helpers.dart
+  h_709d285d7429c5 1-83
+docs/2026-03-27-account-deletion-and-playstore-release-prep.md
+  h_709d285d7429c5 1-269
+scripts/validate-workflows.sh
+  h_709d285d7429c5 1-58
+.agents/agents/mobile-developer.md
+  h_709d285d7429c5 1-377
+.agent/skills/server-management/SKILL.md
+  h_709d285d7429c5 1-161
+.agents/scripts/verify_all.py
+  h_709d285d7429c5 1-327
+build.yaml
+  h_709d285d7429c5 1-7
+lib/routing/app_router.g.dart
+  h_709d285d7429c5 1-27
+lib/features/gallery/presentation/providers/gallery_filter_provider.g.dart
+  h_709d285d7429c5 1-47
+.agents/skills/mobile-design/mobile-debugging.md
+  h_709d285d7429c5 1-122
+test/features/settings/presentation/widgets/settings_sections_test.dart
+  h_709d285d7429c5 1-219
+.agent/skills/frontend-design/SKILL.md
+  h_709d285d7429c5 1-418
+.agent/skills/seo-fundamentals/SKILL.md
+  h_709d285d7429c5 1-129
+.agents/skills/frontend-design/typography-system.md
+  h_709d285d7429c5 1-345
+.agent/skills/performance-profiling/scripts/lighthouse_audit.py
+  h_709d285d7429c5 1-76
+.agent/.shared/ui-ux-pro-max/data/charts.csv
+  h_709d285d7429c5 1-26
+lib/features/template_engine/presentation/helpers/generation_job_manager.dart
+  h_709d285d7429c5 1-133
+supabase/migrations/20260223000000_add_nanobananaprompt_templates.sql
+  h_709d285d7429c5 1-260
+integration_test/settings_flow_test.dart
+  h_709d285d7429c5 1-84
+.agents/workflows/orchestrate.md
+  h_709d285d7429c5 1-237
+.agents/agents/backend-specialist.md
+  h_709d285d7429c5 1-263
+.agents/skills/analytics-tracking/SKILL.md
+  h_709d285d7429c5 1-309
+lib/core/state/auth_view_model_provider.dart
+  h_709d285d7429c5 1-2
+integration_test/template_e2e_test.dart
+  h_709d285d7429c5 1-131
+.agents/skills/in-app-purchases/storekit.md
+  h_709d285d7429c5 1-152
+.agents/ARCHITECTURE.md
+  h_709d285d7429c5 1-288
+test/features/credits/domain/entities/credit_balance_test.dart
+  h_709d285d7429c5 1-51
+.agents/skills/iap-revenuecat/SKILL.md
+  h_709d285d7429c5 1-1056
+.agent/skills/app-builder/project-detection.md
+  h_709d285d7429c5 1-34
+lib/core/constants/generation_constants.dart
+  h_709d285d7429c5 1-12
+.agent/workflows/deploy.md
+  h_709d285d7429c5 1-176
+lint_baseline.txt
+  h_709d285d7429c5 1-41
+.agent/skills/database-design/orm-selection.md
+  h_709d285d7429c5 1-30
+.agents/skills/webapp-testing/scripts/playwright_runner.py
+  h_709d285d7429c5 1-173
+.agents/skills/nextjs-react-expert/6-rendering-rendering-performance.md
+  h_709d285d7429c5 1-432
+.agent/workflows/orchestrate.md
+  h_709d285d7429c5 1-237
+.agent/skills/lint-and-validate/SKILL.md
+  h_709d285d7429c5 1-45
+lib/shared/widgets/animated_retry_button.dart
+  h_709d285d7429c5 1-71
+admin/lib/features/templates/presentation/pages/templates_page.g.dart
+  h_709d285d7429c5 1-29
+.agents/.shared/ui-ux-pro-max/data/icons.csv
+  h_709d285d7429c5 1-101
+ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+  h_709d285d7429c5 1
+.agents/skills/game-development/web-games/SKILL.md
+  h_709d285d7429c5 1-150
+lib/features/subscription/data/repositories/subscription_repository.dart
+  h_709d285d7429c5 1-193
+.agents/.shared/ui-ux-pro-max/data/stacks/nuxt-ui.csv
+  h_709d285d7429c5 1-51
+lib/shared/widgets/app_snackbar.dart
+  h_709d285d7429c5 1-231
+admin/lib/features/dashboard/domain/entities/dashboard_stats.dart
+  h_709d285d7429c5 1-19
+.agent/.shared/ui-ux-pro-max/scripts/design_system.py
+  h_709d285d7429c5 1-1067
+lib/features/subscription/domain/repositories/i_subscription_repository.dart
+  h_709d285d7429c5 1-16
+lib/core/providers/supabase_provider.dart
+  h_709d285d7429c5 1-8
+.agent/skills/api-patterns/trpc.md
+  h_709d285d7429c5 1-41
+.agents/skills/app-builder/templates/nextjs-static/TEMPLATE.md
+  h_709d285d7429c5 1-169
+.agent/skills/in-app-purchases/storekit.md
+  h_709d285d7429c5 1-152
+.agent/.shared/ui-ux-pro-max/data/stacks/shadcn.csv
+  h_709d285d7429c5 1-61
+.agents/skills/api-patterns/rate-limiting.md
+  h_709d285d7429c5 1-31
+.agents/skills/api-patterns/response.md
+  h_709d285d7429c5 1-37
+.agent/skills/nextjs-react-expert/scripts/react_performance_checker.py
+  h_709d285d7429c5 1-252
+.agent/.shared/ui-ux-pro-max/data/stacks/vue.csv
+  h_709d285d7429c5 1-50
+lib/features/gallery/presentation/widgets/failed_image_card.dart
+  h_709d285d7429c5 1-73
+test/features/gallery/data/services/gallery_cache_service_test.dart
+  h_709d285d7429c5 1-115
+.agents/scripts/checklist.py
+  h_709d285d7429c5 1-217
+.agents/skills/analytics-tracking/references/gtm-implementation.md
+  h_709d285d7429c5 1-390
+docs/plans/2026-03-16-p2-retention.md
+  h_709d285d7429c5 1-830
+.agent/agents/database-architect.md
+  h_709d285d7429c5 1-226
+lib/features/settings/presentation/widgets/subscription_card.dart
+  h_709d285d7429c5 1-215
+docs/plans/2026-03-14-iap-webhook-debug-session.md
+  h_709d285d7429c5 1-274
+test/core/services/haptic_service_test.dart
+  h_709d285d7429c5 1-63
+docs/plans/2026-03-10-iap-revenuecat-sync-fix.md
+  h_709d285d7429c5 1-635
+model_capabilities.yaml
+  h_709d285d7429c5 1-108
+admin/AGENTS.md
+  h_709d285d7429c5 1-53
+ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md
+  h_709d285d7429c5 1-5
+lib/core/services/content_moderation_service.dart
+  h_709d285d7429c5 1-71
+lib/features/gallery/data/repositories/gallery_repository.g.dart
+  h_709d285d7429c5 1-28
+lib/core/services/image_upload_service.dart
+  h_709d285d7429c5 1-77
+.agent/skills/bash-linux/SKILL.md
+  h_709d285d7429c5 1-199
+lib/features/settings/data/notifications_provider.g.dart
+  h_709d285d7429c5 1-27
+lib/features/credits/domain/entities/credit_balance.g.dart
+  h_709d285d7429c5 1-21
+.agent/skills/app-builder/templates/nextjs-fullstack/TEMPLATE.md
+  h_709d285d7429c5 1-122
+.agent/skills/intelligent-routing/SKILL.md
+  h_709d285d7429c5 1-335
+ios/Runner.xcworkspace/contents.xcworkspacedata
+  h_709d285d7429c5 1-10
+admin/lib/features/dashboard/presentation/pages/dashboard_page.dart
+  h_709d285d7429c5 1-322
+plans/templates/template-usage-guide.md
+  h_709d285d7429c5 1-58
+.agents/skills/launch-strategy/SKILL.md
+  h_709d285d7429c5 1-353
+.agent/skills/frontend-design/scripts/ux_audit.py
+  h_709d285d7429c5 1-722
+test/features/template_engine/domain/entities/template_model_test.dart
+  h_709d285d7429c5 1-245
+test/features/create/presentation/screens/create_screen_test.dart
+  h_709d285d7429c5 1-178
+.agents/skills/in-app-purchases/SKILL.md
+  h_709d285d7429c5 1-127
+test/features/create/presentation/providers/create_form_provider_test.dart
+  h_709d285d7429c5 1-41
+supabase/migrations/20260221200000_sync_remote_schema.sql
+  h_709d285d7429c5 1-265
+.agents/skills/bash-linux/SKILL.md
+  h_709d285d7429c5 1-199
+.agent/.shared/ui-ux-pro-max/data/web-interface.csv
+  h_709d285d7429c5 1-31
+ios/Runner/Base.lproj/LaunchScreen.storyboard
+  h_709d285d7429c5 1-37
+test/features/credits/domain/entities/credit_transaction_test.dart
+  h_709d285d7429c5 1-107
+lib/features/gallery/presentation/widgets/image_viewer_page_indicator.dart
+  h_709d285d7429c5 1-41
+docs/admin-templates/02-prompt-library.md
+  h_709d285d7429c5 1-297
+lib/features/settings/presentation/widgets/theme_switcher.dart
+  h_709d285d7429c5 1-44
+admin/lib/features/dashboard/providers/dashboard_stats_provider.dart
+  h_709d285d7429c5 1-37
+.agent/skills/mobile-design/mobile-color-system.md
+  h_709d285d7429c5 1-420
+.agents/mcp_config.json
+  h_709d285d7429c5 1-24
+.agent/skills/in-app-purchases/flutter.md
+  h_709d285d7429c5 1-221
+test/shared/widgets/output_format_toggle_test.dart
+  h_709d285d7429c5 1-122
+.agent/skills/app-builder/templates/electron-desktop/TEMPLATE.md
+  h_709d285d7429c5 1-88
+.agent/skills/parallel-agents/SKILL.md
+  h_709d285d7429c5 1-175
+.agent/skills/launch-strategy/evals/evals.json
+  h_709d285d7429c5 1-91
+.agents/.shared/ui-ux-pro-max/data/charts.csv
+  h_709d285d7429c5 1-26
+lib/core/providers/connectivity_provider.dart
+  h_709d285d7429c5 1-15
+.agents/skills/mobile-design/decision-trees.md
+  h_709d285d7429c5 1-516
+.agents/skills/mobile-design/mobile-color-system.md
+  h_709d285d7429c5 1-420
+lib/features/template_engine/data/repositories/generation_repository.dart
+  h_709d285d7429c5 1-212
+test/features/settings/data/notifications_provider_test.dart
+  h_709d285d7429c5 1-82
+.agent/skills/documentation-templates/SKILL.md
+  h_709d285d7429c5 1-194
+.agent/scripts/checklist.py
+  h_709d285d7429c5 1-217
+.agents/agents/explorer-agent.md
+  h_709d285d7429c5 1-73
+.agents/skills/powershell-windows/SKILL.md
+  h_709d285d7429c5 1-167
+admin/lib/core/utils/retry.dart
+  h_709d285d7429c5 1-31
+test/features/auth/presentation/screens/splash_screen_test.dart
+  h_709d285d7429c5 1-34
+lib/features/create/presentation/widgets/aspect_ratio_selector.dart
+  h_709d285d7429c5 1-46
+windows/runner/Runner.rc
+  h_709d285d7429c5 1-121
+.agent/skills/game-development/3d-games/SKILL.md
+  h_709d285d7429c5 1-135
+.agents/skills/api-patterns/auth.md
+  h_709d285d7429c5 1-24
+lib/features/credits/domain/entities/credit_balance.freezed.dart
+  h_709d285d7429c5 1-226
+lib/features/template_engine/presentation/screens/home_screen.dart
+  h_709d285d7429c5 1-248
+lib/core/constants/app_constants.dart
+  h_709d285d7429c5 1-37
+admin/test/features/templates/presentation/pages/templates_reorder_test.dart
+  h_709d285d7429c5 1-137
+.agents/skills/mcp-builder/SKILL.md
+  h_709d285d7429c5 1-176
+.agents/skills/systematic-debugging/SKILL.md
+  h_709d285d7429c5 1-109
+README.md
+  h_709d285d7429c5 1-236
+lib/shared/widgets/error_page.dart
+  h_709d285d7429c5 1-35
+.mcp.json
+  h_709d285d7429c5 1-8
+docs/kie-api/google/imagen4.md
+  h_709d285d7429c5 1-268
+lib/features/subscription/domain/entities/subscription_status.g.dart
+  h_709d285d7429c5 1-27
+.agents/skills/app-builder/templates/nextjs-fullstack/TEMPLATE.md
+  h_709d285d7429c5 1-122
+docs/project-changelog.md
+  h_709d285d7429c5 1-170
+scripts/setup_search.sh
+  h_709d285d7429c5 1-103
+.agent/skills/frontend-design/animation-guide.md
+  h_709d285d7429c5 1-331
+.agents/skills/mobile-design/mobile-design-thinking.md
+  h_709d285d7429c5 1-357
+docs/kie-api/google/imagen4-ultra.md
+  h_709d285d7429c5 1-268
+lib/features/credits/presentation/providers/credit_balance_provider.dart
+  h_709d285d7429c5 1-17
+test/shared/widgets/loading_state_widget_reduced_motion_test.dart
+  h_709d285d7429c5 1-42
+windows/runner/resource.h
+  h_709d285d7429c5 1-16
+.agent/skills/mobile-design/scripts/mobile_audit.py
+  h_709d285d7429c5 1-670
+.agent/skills/analytics-tracking/evals/evals.json
+  h_709d285d7429c5 1-90
+lib/core/providers/supabase_provider.g.dart
+  h_709d285d7429c5 1-27
+.agents/agents/performance-optimizer.md
+  h_709d285d7429c5 1-187
+supabase/functions/generate-image/index.ts
+  h_709d285d7429c5 1-835
+.agents/skills/tdd-workflow/SKILL.md
+  h_709d285d7429c5 1-149
+.agents/skills/game-development/2d-games/SKILL.md
+  h_709d285d7429c5 1-119
+ios/Runner.xcodeproj/project.pbxproj
+  h_709d285d7429c5 1-746
+.agents/skills/database-design/orm-selection.md
+  h_709d285d7429c5 1-30
+test/core/fixtures/fixtures.dart
+  h_709d285d7429c5 1-11
+lib/features/template_engine/presentation/view_models/generation_view_model.dart
+  h_709d285d7429c5 1-110
+.agents/skills/api-patterns/scripts/api_validator.py
+  h_709d285d7429c5 1-211
+supabase/functions/delete-account/index.ts
+  h_709d285d7429c5 1-139
+.agent/skills/seo-fundamentals/scripts/seo_checker.py
+  h_709d285d7429c5 1-219
+test/core/utils/url_launcher_utils_test.dart
+  h_709d285d7429c5 1-103
+.agent/skills/nextjs-react-expert/scripts/convert_rules.py
+  h_709d285d7429c5 1-222
+.agent/skills/paywall-upgrade-cro/references/experiments.md
+  h_709d285d7429c5 1-164
+.agents/skills/app-builder/templates/react-native-app/TEMPLATE.md
+  h_709d285d7429c5 1-119
+lib/features/credits/presentation/providers/credit_history_provider.g.dart
+  h_709d285d7429c5 1-172
+docs/kie-api/upload-file/upload-file-url.md
+  h_709d285d7429c5 1-344
+supabase/migrations/20260219000000_add_subscription_support.sql
+  h_709d285d7429c5 1-70
+.agents/skills/api-patterns/api-style.md
+  h_709d285d7429c5 1-42
+.agents/.shared/ui-ux-pro-max/data/stacks/swiftui.csv
+  h_709d285d7429c5 1-51
+supabase/functions/_shared/model_config.ts
+  h_709d285d7429c5 1-59
+lib/core/design_system/app_dimensions.dart
+  h_709d285d7429c5 1-24
+docs/kie-api/upload-file/quickstart.md
+  h_709d285d7429c5 1-732
+docs/kie-api/kie-api-llms.txt
+  h_709d285d7429c5 1-171
+lib/core/services/storage_url_service.dart
+  h_709d285d7429c5 1-83
+lib/shared/widgets/watermark_overlay.dart
+  h_709d285d7429c5 1-41
+.agents/skills/frontend-design/motion-graphics.md
+  h_709d285d7429c5 1-306
+test/features/template_engine/presentation/providers/generation_policy_provider_test.dart
+  h_709d285d7429c5 1-49
+.agents/skills/database-design/optimization.md
+  h_709d285d7429c5 1-36
+.agents/skills/in-app-purchases/server.md
+  h_709d285d7429c5 1-241
+docs/handoff-2026-08-14-recovery-and-db-setup.md
+  h_709d285d7429c5 1-81
+.agents/skills/deployment-procedures/SKILL.md
+  h_709d285d7429c5 1-241
+lib/features/credits/data/repositories/credit_repository.dart
+  h_709d285d7429c5 1-208
+lib/features/gallery/presentation/widgets/empty_gallery_state.dart
+  h_709d285d7429c5 1-139
+lib/features/auth/domain/providers/onboarding_provider.dart
+  h_709d285d7429c5 1-21
+.agents/.shared/ui-ux-pro-max/data/colors.csv
+  h_709d285d7429c5 1-97
+lib/features/auth/presentation/view_models/auth_view_model.dart
+  h_709d285d7429c5 1-310
+.agent/agents/orchestrator.md
+  h_709d285d7429c5 1-416
+ios/Flutter/Debug.xcconfig
+  h_709d285d7429c5 1-2
+android/app/src/main/res/drawable-v21/launch_background.xml
+  h_709d285d7429c5 1-12
+.github/copilot-instructions.md
+  h_709d285d7429c5 1-171
+supabase/functions/generate-image/deno.json
+  h_709d285d7429c5 1-3
+.agent/skills/in-app-purchases/SKILL.md
+  h_709d285d7429c5 1-127
+.agent/skills/frontend-design/decision-trees.md
+  h_709d285d7429c5 1-418
+lib/routing/app_router.dart
+  h_709d285d7429c5 1-67
+.agent/skills/python-patterns/SKILL.md
+  h_709d285d7429c5 1-441
+lib/features/template_engine/domain/providers/generation_repository_provider.dart
+  h_709d285d7429c5 1-2
+.agents/skills/in-app-purchases/testing.md
+  h_709d285d7429c5 1-359
+.agent/skills/geo-fundamentals/SKILL.md
+  h_709d285d7429c5 1-156
+admin/README.md
+  h_709d285d7429c5 1-96
+.agent/skills/app-builder/templates/chrome-extension/TEMPLATE.md
+  h_709d285d7429c5 1-92
+test/features/auth/presentation/screens/register_screen_test.dart
+  h_709d285d7429c5 1-160
+.agent/workflows/brainstorm.md
+  h_709d285d7429c5 1-113
+.agent/skills/webapp-testing/SKILL.md
+  h_709d285d7429c5 1-187
+windows/flutter/CMakeLists.txt
+  h_709d285d7429c5 1-109
+test/features/settings/presentation/widgets/subscription_card_test.dart
+  h_709d285d7429c5 1-143
+lib/features/auth/presentation/widgets/social_login_buttons.dart
+  h_709d285d7429c5 1-90
+.agents/.shared/ui-ux-pro-max/data/react-performance.csv
+  h_709d285d7429c5 1-45
+test/features/template_engine/presentation/widgets/generation_progress_test.dart
+  h_709d285d7429c5 1-119
+test/core/mocks/mocks.dart
+  h_709d285d7429c5 1-9
+lib/features/template_engine/presentation/providers/generation_options_provider.g.dart
+  h_709d285d7429c5 1-29
+lib/features/template_engine/presentation/providers/generation_options_provider.dart
+  h_709d285d7429c5 1-36
+.agents/skills/geo-fundamentals/scripts/geo_checker.py
+  h_709d285d7429c5 1-289
+test/core/utils/retry_test.dart
+  h_709d285d7429c5 1-71
+lib/shared/widgets/error_state_widget.dart
+  h_709d285d7429c5 1-221
+.agent/scripts/session_manager.py
+  h_709d285d7429c5 1-120
+.agents/skills/analytics-tracking/evals/evals.json
+  h_709d285d7429c5 1-90
+docs/kie-api/google/nano-banana-2.md
+  h_709d285d7429c5 1-295
+.agent/skills/game-development/vr-ar/SKILL.md
+  h_709d285d7429c5 1-123
+supabase/migrations/20260222_add_model_id_to_generation_jobs.sql
+  h_709d285d7429c5 1-6
+.agents/skills/google-play-publishing/examples/artio-ai-photo.md
+  h_709d285d7429c5 1-121
+ios/Runner/Info.plist
+  h_709d285d7429c5 1-146
+.agent/skills/nextjs-react-expert/5-rerender-re-render-optimization.md
+  h_709d285d7429c5 1-581
+supabase/functions/verify-google-purchase/index.ts
+  h_709d285d7429c5 1-241
+.agents/skills/in-app-purchases/google-play.md
+  h_709d285d7429c5 1-177
+.agent/skills/database-design/SKILL.md
+  h_709d285d7429c5 1-52
+supabase/migrations/20260128094706_create_admin_user.sql
+  h_709d285d7429c5 1-44
+.agents/skills/paywall-upgrade-cro/references/experiments.md
+  h_709d285d7429c5 1-164
+test/features/credits/presentation/providers/credit_balance_provider_test.dart
+  h_709d285d7429c5 1-93
+lib/features/gallery/presentation/widgets/empty_gallery_illustration.dart
+  h_709d285d7429c5 1-151
+android/app/src/main/res/values/styles.xml
+  h_709d285d7429c5 1-18
+.agents/skills/app-builder/templates/cli-tool/TEMPLATE.md
+  h_709d285d7429c5 1-88
+pubspec.yaml
+  h_709d285d7429c5 1-82
+lib/features/auth/presentation/screens/login_screen.dart
+  h_709d285d7429c5 1-230
+.agents/skills/code-review-checklist/SKILL.md
+  h_709d285d7429c5 1-109
+lib/features/template_engine/presentation/providers/generation_policy_provider.g.dart
+  h_709d285d7429c5 1-28
+lib/features/template_engine/data/repositories/template_repository.g.dart
+  h_709d285d7429c5 1-29
+.agent/skills/architecture/context-discovery.md
+  h_709d285d7429c5 1-43
+admin/lib/core/constants/app_constants.dart
+  h_709d285d7429c5 1-13
+.agents/.shared/ui-ux-pro-max/data/products.csv
+  h_709d285d7429c5 1-97
+lib/features/subscription/presentation/widgets/tier_comparison_card.dart
+  h_709d285d7429c5 1-150
+plans/templates/refactor-template.md
+  h_709d285d7429c5 1-82
+.agents/skills/nextjs-react-expert/4-client-client-side-data-fetching.md
+  h_709d285d7429c5 1-264
+.agents/skills/vulnerability-scanner/SKILL.md
+  h_709d285d7429c5 1-276
+.agent/skills/database-design/schema-design.md
+  h_709d285d7429c5 1-56
+lib/features/credits/presentation/providers/ad_reward_provider.g.dart
+  h_709d285d7429c5 1-36
+lib/features/subscription/domain/providers/subscription_repository_provider.dart
+  h_709d285d7429c5 1-2
+docs/gemini/gemini-3-pro-image-preview.md
+  h_709d285d7429c5 1-25
+test/core/constants/ai_models_test.dart
+  h_709d285d7429c5 1-211
+scripts/validate-all.sh
+  h_709d285d7429c5 1-44
+.agents/skills/mobile-design/mobile-navigation.md
+  h_709d285d7429c5 1-458
+lib/theme/theme_provider.g.dart
+  h_709d285d7429c5 1-26
+.agents/skills/app-builder/SKILL.md
+  h_709d285d7429c5 1-75
+.agent/skills/architecture/pattern-selection.md
+  h_709d285d7429c5 1-68
+lib/features/template_engine/data/policies/credit_check_policy.dart
+  h_709d285d7429c5 1-32
+.agent/skills/app-builder/templates/SKILL.md
+  h_709d285d7429c5 1-39
+docs/gemini/imagen.md
+  h_709d285d7429c5 1-512
+lib/theme/app_theme.dart
+  h_709d285d7429c5 1-193
+.agent/.shared/ui-ux-pro-max/data/stacks/flutter.csv
+  h_709d285d7429c5 1-53
+docs/kie-api/flux2/flux2-flex-text-to-image.md
+  h_709d285d7429c5 1-271
+docs/kie-api/upload-file/upload-file-stream.md
+  h_709d285d7429c5 1-324
+.agent/skills/app-builder/feature-building.md
+  h_709d285d7429c5 1-53
+docs/ai-models-reference.md
+  h_709d285d7429c5 1-252
+lib/features/create/presentation/widgets/auth_gate_sheet.dart
+  h_709d285d7429c5 1-58
+lib/core/utils/date_time_utils.dart
+  h_709d285d7429c5 1-11
+.agents/skills/in-app-purchases/paywalls.md
+  h_709d285d7429c5 1-272
+windows/runner/utils.h
+  h_709d285d7429c5 1-19
+.agent/skills/game-development/game-audio/SKILL.md
+  h_709d285d7429c5 1-190
+test/integration/template_seed_test.dart
+  h_709d285d7429c5 1-222
+.agents/skills/paywall-upgrade-cro/SKILL.md
+  h_709d285d7429c5 1-227
+test/core/mocks/mock_repositories.dart
+  h_709d285d7429c5 1-17
+.agent/skills/app-builder/templates/astro-static/TEMPLATE.md
+  h_709d285d7429c5 1-76
+.agent/skills/in-app-purchases/revenuecat.md
+  h_709d285d7429c5 1-309
+.agent/agents/game-developer.md
+  h_709d285d7429c5 1-162
+test/features/template_engine/presentation/providers/template_provider_test.dart
+  h_709d285d7429c5 1-130
+.agents/skills/app-builder/feature-building.md
+  h_709d285d7429c5 1-53
+lib/features/template_engine/domain/repositories/i_generation_repository.dart
+  h_709d285d7429c5 1-21
+admin/lib/features/templates/domain/entities/admin_template_model.freezed.dart
+  h_709d285d7429c5 1-484
+docs/kie-api/seedream/seedream-4.5-edit.md
+  h_709d285d7429c5 1-283
+.agents/workflows/deploy.md
+  h_709d285d7429c5 1-176
+test/core/widgets/bottom_sheet_body_test.dart
+  h_709d285d7429c5 1-92
+.agent/skills/app-builder/agent-coordination.md
+  h_709d285d7429c5 1-71
+.agents/workflows/preview.md
+  h_709d285d7429c5 1-81
+lib/core/design_system/app_spacing.dart
+  h_709d285d7429c5 1-19
+.agents/skills/frontend-design/scripts/ux_audit.py
+  h_709d285d7429c5 1-722
+.agents/.shared/ui-ux-pro-max/data/landing.csv
+  h_709d285d7429c5 1-31
+lib/features/gallery/domain/entities/gallery_item.dart
+  h_709d285d7429c5 1-39
+.agent/skills/brainstorming/dynamic-questioning.md
+  h_709d285d7429c5 1-350
+.agent/skills/lint-and-validate/scripts/type_coverage.py
+  h_709d285d7429c5 1-173
+lib/features/template_engine/domain/entities/input_field_model.freezed.dart
+  h_709d285d7429c5 1-370
+windows/runner/main.cpp
+  h_709d285d7429c5 1-43
+test/features/template_engine/data/services/template_cache_service_test.dart
+  h_709d285d7429c5 1-122
+.agents/skills/app-builder/project-detection.md
+  h_709d285d7429c5 1-34
+.agent/skills/i18n-localization/scripts/i18n_checker.py
+  h_709d285d7429c5 1-241
+lib/core/utils/email_validator.dart
+  h_709d285d7429c5 1-23
+docs/code-standards.md
+  h_709d285d7429c5 1-663
+lib/core/utils/retry.dart
+  h_709d285d7429c5 1-45
+docs/kie-api/upload-file/upload-file-base-64.md
+  h_709d285d7429c5 1-341
+.agents/skills/mobile-design/SKILL.md
+  h_709d285d7429c5 1-394
+ios/Runner/Base.lproj/Main.storyboard
+  h_709d285d7429c5 1-26
+test/shared/widgets/retry_text_button_test.dart
+  h_709d285d7429c5 1-50
+.agent/skills/web-design-guidelines/SKILL.md
+  h_709d285d7429c5 1-57
+test/core/helpers/pump_app.dart
+  h_709d285d7429c5 1-47
+lib/features/subscription/domain/entities/subscription_package.freezed.dart
+  h_709d285d7429c5 1-321
+.agents/skills/web-design-guidelines/SKILL.md
+  h_709d285d7429c5 1-57
+.agents/skills/frontend-design/ux-psychology.md
+  h_709d285d7429c5 1-1116
+docs/kie-api/google/nano-banana-edit.md
+  h_709d285d7429c5 1-283
+.agent/skills/game-development/2d-games/SKILL.md
+  h_709d285d7429c5 1-119
+docs/gemini/image-generation.md
+  h_709d285d7429c5 1-411
+lib/features/settings/presentation/widgets/user_profile_card.dart
+  h_709d285d7429c5 1-106
+.agents/skills/api-patterns/graphql.md
+  h_709d285d7429c5 1-41
+lib/core/services/rewarded_ad_service.g.dart
+  h_709d285d7429c5 1-28
+lib/features/gallery/domain/providers/gallery_repository_provider.dart
+  h_709d285d7429c5 1-2
+.agents/skills/api-patterns/versioning.md
+  h_709d285d7429c5 1-22
+lib/features/create/presentation/widgets/generation_progress_overlay.dart
+  h_709d285d7429c5 1-67
+lib/shared/widgets/gradient_button.dart
+  h_709d285d7429c5 1-70
+dart_test.yaml
+  h_709d285d7429c5 1-7
+.agents/.shared/ui-ux-pro-max/data/stacks/nextjs.csv
+  h_709d285d7429c5 1-53
+.agents/skills/api-patterns/documentation.md
+  h_709d285d7429c5 1-26
+.agent/skills/nextjs-react-expert/8-advanced-advanced-patterns.md
+  h_709d285d7429c5 1-150
+supabase/.gitignore
+  h_709d285d7429c5 1-8
+.agent/skills/mcp-builder/SKILL.md
+  h_709d285d7429c5 1-176
+.agent/.shared/ui-ux-pro-max/data/stacks/nuxt-ui.csv
+  h_709d285d7429c5 1-51
+scripts/validate-templates.sh
+  h_709d285d7429c5 1-58
+.agents/skills/webapp-testing/SKILL.md
+  h_709d285d7429c5 1-187
+admin/lib/core/shell/admin_shell.dart
+  h_709d285d7429c5 1-125
+test/features/subscription/data/repositories/subscription_repository_test.dart
+  h_709d285d7429c5 1-239
+lib/features/credits/data/repositories/credit_repository.g.dart
+  h_709d285d7429c5 1-27
+.agent/skills/iap-revenuecat/SKILL.md
+  h_709d285d7429c5 1-1056
+.agents/.shared/ui-ux-pro-max/data/web-interface.csv
+  h_709d285d7429c5 1-31
+.agent/.shared/ui-ux-pro-max/data/prompts.csv
+  h_709d285d7429c5 1-24
+scripts/search_repo.sh
+  h_709d285d7429c5 1-58
+test/core/utils/watermark_util_test.dart
+  h_709d285d7429c5 1-69
+test/core/fixtures/generation_job_fixtures.dart
+  h_709d285d7429c5 1-118
+.ckignore
+  h_709d285d7429c5 1-136
+.agent/skills/frontend-design/visual-effects.md
+  h_709d285d7429c5 1-383
+.agent/skills/api-patterns/rate-limiting.md
+  h_709d285d7429c5 1-31
+.agents/skills/google-play-publishing/checklist-template.md
+  h_709d285d7429c5 1-157
+.agents/agents/project-planner.md
+  h_709d285d7429c5 1-406
+lib/features/gallery/presentation/providers/gallery_filter_provider.freezed.dart
+  h_709d285d7429c5 1-210
+ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+  h_709d285d7429c5 1-7
+test/core/utils/app_exception_mapper_test.dart
+  h_709d285d7429c5 1-229
+android/.gitignore
+  h_709d285d7429c5 1-14
+.agents/skills/testing-patterns/scripts/test_runner.py
+  h_709d285d7429c5 1-219
+.agent/mcp_config.json
+  h_709d285d7429c5 1-24
+docs/kie-api/flux2/flux2-pro-image-to-image.md
+  h_709d285d7429c5 1-279
+lib/features/template_engine/presentation/providers/template_provider.g.dart
+  h_709d285d7429c5 1-294
+scripts/search_repo.ps1
+  h_709d285d7429c5 1-95
+lib/features/template_engine/domain/policies/generation_policy.freezed.dart
+  h_709d285d7429c5 1-364
+.agent/skills/i18n-localization/SKILL.md
+  h_709d285d7429c5 1-154
+test/features/auth/domain/entities/user_model_test.dart
+  h_709d285d7429c5 1-309
+admin/lib/features/dashboard/domain/entities/dashboard_stats.g.dart
+  h_709d285d7429c5 1-30
+lib/features/auth/domain/entities/user_model.dart
+  h_709d285d7429c5 1-60
+.agents/skills/nextjs-react-expert/scripts/convert_rules.py
+  h_709d285d7429c5 1-222
+.agent/skills/app-builder/templates/react-native-app/TEMPLATE.md
+  h_709d285d7429c5 1-119
+lib/shared/widgets/retry_text_button.dart
+  h_709d285d7429c5 1-42
+.agent/skills/app-builder/templates/express-api/TEMPLATE.md
+  h_709d285d7429c5 1-83
+android/build.gradle.kts
+  h_709d285d7429c5 1-51
+test/features/gallery/presentation/pages/image_viewer_page_test.dart
+  h_709d285d7429c5 1-208
+test/shared/widgets/model_selector_test.dart
+  h_709d285d7429c5 1-154
+.agents/skills/frontend-design/animation-guide.md
+  h_709d285d7429c5 1-331
+lib/core/constants/ai_models.dart
+  h_709d285d7429c5 1-238
+lib/features/subscription/presentation/screens/paywall_screen.dart
+  h_709d285d7429c5 1-734
+lib/features/template_engine/domain/entities/generation_options_model.g.dart
+  h_709d285d7429c5 1-27
+.agents/skills/architecture/context-discovery.md
+  h_709d285d7429c5 1-43
+AGENTS.md
+  h_709d285d7429c5 1-43
+lib/features/template_engine/domain/entities/generation_job_model.freezed.dart
+  h_709d285d7429c5 1-461
+test/features/credits/presentation/screens/credit_history_screen_test.dart
+  h_709d285d7429c5 1-82
+.agent/agents/documentation-writer.md
+  h_709d285d7429c5 1-104
+lib/features/subscription/presentation/providers/subscription_provider.dart
+  h_709d285d7429c5 1-103
+android/app/src/debug/AndroidManifest.xml
+  h_709d285d7429c5 1-7
+admin/lib/features/dashboard/providers/dashboard_stats_provider.g.dart
+  h_709d285d7429c5 1-28
+.agent/agents/project-planner.md
+  h_709d285d7429c5 1-406
+test/shared/widgets/error_page_test.dart
+  h_709d285d7429c5 1-41
+.agents/workflows/test.md
+  h_709d285d7429c5 1-144
+lib/core/design_system/app_typography.dart
+  h_709d285d7429c5 1-172
+docs/plans/2026-03-25-pr84-review-fixes-design.md
+  h_709d285d7429c5 1-75
+lib/features/create/presentation/create_screen.dart
+  h_709d285d7429c5 1-271
+.agents/skills/database-design/SKILL.md
+  h_709d285d7429c5 1-52
+test/core/fixtures/user_fixtures.dart
+  h_709d285d7429c5 1-51
+.agents/skills/architecture/patterns-reference.md
+  h_709d285d7429c5 1-50
+integration_test/auth_flow_test.dart
+  h_709d285d7429c5 1-119
+.agent/skills/powershell-windows/SKILL.md
+  h_709d285d7429c5 1-167
+.agents/.shared/ui-ux-pro-max/data/stacks/vue.csv
+  h_709d285d7429c5 1-50
+docs/kie-api/flux2/flux2-pro-text-to-image.md
+  h_709d285d7429c5 1-269
+docs/kie-api/gpt-image/gpt-image-1.5-image-to-image.md
+  h_709d285d7429c5 1-308
+.agent/skills/api-patterns/api-style.md
+  h_709d285d7429c5 1-42
+.agent/skills/mobile-design/platform-ios.md
+  h_709d285d7429c5 1-561
+test/core/utils/email_validator_test.dart
+  h_709d285d7429c5 1-50
+supabase/config.toml
+  h_709d285d7429c5 1-404
+lib/core/design_system/app_animations.dart
+  h_709d285d7429c5 1-126
+.agent/skills/app-builder/templates/monorepo-turborepo/TEMPLATE.md
+  h_709d285d7429c5 1-90
+.agents/skills/mobile-design/scripts/mobile_audit.py
+  h_709d285d7429c5 1-670
+.agents/workflows/brainstorm.md
+  h_709d285d7429c5 1-113
+test/features/template_engine/presentation/screens/template_detail_screen_test.dart
+  h_709d285d7429c5 1-144
+.agent/skills/performance-profiling/SKILL.md
+  h_709d285d7429c5 1-143
+lib/features/auth/presentation/screens/register_screen.dart
+  h_709d285d7429c5 1-246
+lib/features/template_engine/AGENTS.md
+  h_709d285d7429c5 1-53
+.agents/scripts/session_manager.py
+  h_709d285d7429c5 1-120
+.agent/skills/game-development/pc-games/SKILL.md
+  h_709d285d7429c5 1-144
+docs/kie-api/kie-pricing.md
+  h_709d285d7429c5 1-99
+.agent/skills/nextjs-react-expert/2-bundle-bundle-size-optimization.md
+  h_709d285d7429c5 1-240
+supabase/migrations/20260220170000_create_rate_limit.sql
+  h_709d285d7429c5 1-85
+supabase/migrations/20260221000000_fix_subscription_trigger.sql
+  h_709d285d7429c5 1-29
+lib/shared/widgets/aspect_ratio_selector.dart
+  h_709d285d7429c5 1-84
+docs/2026-03-27-play-store-release-checklist.md
+  h_709d285d7429c5 1-229
+.agents/skills/seo-fundamentals/SKILL.md
+  h_709d285d7429c5 1-129
+ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme
+  h_709d285d7429c5 1-101
+lib/features/template_engine/data/repositories/generation_repository.g.dart
+  h_709d285d7429c5 1-29
+lib/shared/widgets/image_input_widget.dart
+  h_709d285d7429c5 1-202
+.agent/skills/api-patterns/response.md
+  h_709d285d7429c5 1-37
+lib/routing/routes/app_routes.g.dart
+  h_709d285d7429c5 1-301
+lib/shared/widgets/offline_banner.dart
+  h_709d285d7429c5 1-190
+windows/runner/CMakeLists.txt
+  h_709d285d7429c5 1-40
+lib/features/create/presentation/providers/create_form_provider.g.dart
+  h_709d285d7429c5 1-27
+test/features/template_engine/domain/entities/input_field_model_test.dart
+  h_709d285d7429c5 1-147
+windows/runner/win32_window.cpp
+  h_709d285d7429c5 1-288
+lib/main.dart
+  h_709d285d7429c5 1-149
+.agent/workflows/debug.md
+  h_709d285d7429c5 1-103
+lib/features/template_engine/presentation/screens/template_detail_screen.dart
+  h_709d285d7429c5 1-407
+.agent/rules/GEMINI.md
+  h_709d285d7429c5 1-273
+.agents/agents/security-auditor.md
+  h_709d285d7429c5 1-170
+.agent/skills/api-patterns/documentation.md
+  h_709d285d7429c5 1-26
+lib/core/services/rewarded_ad_service.dart
+  h_709d285d7429c5 1-135
+admin/.gitignore
+  h_709d285d7429c5 1-45
+.agent/skills/api-patterns/rest.md
+  h_709d285d7429c5 1-40
+.agents/skills/red-team-tactics/SKILL.md
+  h_709d285d7429c5 1-199
+.agent/skills/nodejs-best-practices/SKILL.md
+  h_709d285d7429c5 1-333
+supabase/migrations/20260304000004_fix_revoke_public_and_index.sql
+  h_709d285d7429c5 1-20
+lib/features/gallery/domain/repositories/i_gallery_repository.dart
+  h_709d285d7429c5 1-43
+lib/theme/app_component_themes.dart
+  h_709d285d7429c5 1-211
+.agent/agents/mobile-developer.md
+  h_709d285d7429c5 1-377
+.agent/skills/mobile-design/SKILL.md
+  h_709d285d7429c5 1-394
+.agent/skills/plan-writing/SKILL.md
+  h_709d285d7429c5 1-152
+lib/features/gallery/data/services/gallery_cache_service.dart
+  h_709d285d7429c5 1-94
+.agents/rules/GEMINI.md
+  h_709d285d7429c5 1-273
+.agent/skills/systematic-debugging/SKILL.md
+  h_709d285d7429c5 1-109
+.agents/skills/mobile-design/platform-ios.md
+  h_709d285d7429c5 1-561
+lib/features/template_engine/presentation/widgets/generation_progress_sections.dart
+  h_709d285d7429c5 1-252
+.agents/skills/intelligent-routing/SKILL.md
+  h_709d285d7429c5 1-335
+supabase/migrations/20260304000001_fix_critical_security.sql
+  h_709d285d7429c5 1-119
+web/index.html
+  h_709d285d7429c5 1-38
+windows/runner/flutter_window.h
+  h_709d285d7429c5 1-33
+supabase/migrations/20260304000002_fix_function_signatures.sql
+  h_709d285d7429c5 1-297
+.agent/skills/api-patterns/versioning.md
+  h_709d285d7429c5 1-22
+admin/lib/features/auth/presentation/pages/login_page.dart
+  h_709d285d7429c5 1-256
+lib/features/gallery/presentation/widgets/image_viewer_swipe_dismiss.dart
+  h_709d285d7429c5 1-81
+admin/lib/features/templates/presentation/pages/template_editor_page.dart
+  h_709d285d7429c5 1-598
+lib/features/credits/presentation/screens/credit_history_screen.dart
+  h_709d285d7429c5 1-259
+scripts/validate-skills.sh
+  h_709d285d7429c5 1-65
+lib/features/gallery/presentation/widgets/image_viewer_app_bar.dart
+  h_709d285d7429c5 1-98
+docs/admin-templates/01-import-workflow.md
+  h_709d285d7429c5 1-183
+lib/features/gallery/presentation/providers/gallery_filter_provider.dart
+  h_709d285d7429c5 1-97
+lib/features/template_engine/presentation/widgets/home_screen_widgets.dart
+  h_709d285d7429c5 1-116
+.agent/agents/penetration-tester.md
+  h_709d285d7429c5 1-188
+.agent/.shared/ui-ux-pro-max/data/ux-guidelines.csv
+  h_709d285d7429c5 1-100
+docs/revenuecat-checklist.md
+  h_709d285d7429c5 1-171
+.agent/skills/architecture/SKILL.md
+  h_709d285d7429c5 1-55
+.agent/agents/devops-engineer.md
+  h_709d285d7429c5 1-242
+.agent/skills/api-patterns/scripts/api_validator.py
+  h_709d285d7429c5 1-211
+lib/core/providers/connectivity_provider.g.dart
+  h_709d285d7429c5 1-27
+.gitattributes
+  h_709d285d7429c5 1-31
+.agent/skills/brainstorming/SKILL.md
+  h_709d285d7429c5 1-163
+.agent/skills/vulnerability-scanner/scripts/security_scan.py
+  h_709d285d7429c5 1-458
+.agents/skills/vulnerability-scanner/scripts/security_scan.py
+  h_709d285d7429c5 1-458
+.agents/skills/architecture/trade-off-analysis.md
+  h_709d285d7429c5 1-77
+test/features/gallery/presentation/providers/gallery_filter_test.dart
+  h_709d285d7429c5 1-160
+.agent/workflows/preview.md
+  h_709d285d7429c5 1-81
+.agents/skills/mobile-design/mobile-performance.md
+  h_709d285d7429c5 1-767
+.agents/skills/database-design/indexing.md
+  h_709d285d7429c5 1-39
+lib/features/create/presentation/view_models/create_view_model.dart
+  h_709d285d7429c5 1-190
+.agent/skills/mobile-design/mobile-testing.md
+  h_709d285d7429c5 1-356
+.agent/skills/database-design/migrations.md
+  h_709d285d7429c5 1-48
+.agents/skills/analytics-tracking/references/ga4-implementation.md
+  h_709d285d7429c5 1-300
+admin/analysis_options.yaml
+  h_709d285d7429c5 1-32
+lib/features/gallery/data/repositories/gallery_repository.dart
+  h_709d285d7429c5 1-353
+.agent/skills/tdd-workflow/SKILL.md
+  h_709d285d7429c5 1-149
+lib/features/auth/domain/entities/user_model.freezed.dart
+  h_709d285d7429c5 1-334
+admin/lib/features/templates/domain/entities/admin_template_model.dart
+  h_709d285d7429c5 1-31
+.agents/skills/app-builder/templates/flutter-app/TEMPLATE.md
+  h_709d285d7429c5 1-90
+test/features/gallery/presentation/widgets/masonry_image_grid_test.dart
+  h_709d285d7429c5 1-125
+ios/Flutter/Release.xcconfig
+  h_709d285d7429c5 1-2
+lib/core/services/att_service.dart
+  h_709d285d7429c5 1-54
+docs/gemini/gemini-2.5-flash-image.md
+  h_709d285d7429c5 1-24
+test/core/utils/prompt_validator_test.dart
+  h_709d285d7429c5 1-74
+lib/core/utils/subagent_smoke_codegen.dart
+  h_709d285d7429c5 1
+lib/features/gallery/presentation/widgets/image_info_bottom_sheet.dart
+  h_709d285d7429c5 1-229
+lib/features/template_engine/presentation/widgets/template_detail_widgets.dart
+  h_709d285d7429c5 1-127
+.agents/skills/game-development/multiplayer/SKILL.md
+  h_709d285d7429c5 1-132
+lib/features/gallery/domain/entities/gallery_item.g.dart
+  h_709d285d7429c5 1-51
+.agent/agents/product-owner.md
+  h_709d285d7429c5 1-95
+.agents/skills/i18n-localization/SKILL.md
+  h_709d285d7429c5 1-154
+.agent/skills/paywall-upgrade-cro/evals/evals.json
+  h_709d285d7429c5 1-93
+.agents/skills/app-builder/tech-stack.md
+  h_709d285d7429c5 1-40
+.agent/.shared/ui-ux-pro-max/data/stacks/svelte.csv
+  h_709d285d7429c5 1-54
+.agents/skills/app-builder/templates/nuxt-app/TEMPLATE.md
+  h_709d285d7429c5 1-134
+test/features/credits/presentation/widgets/premium_model_sheet_test.dart
+  h_709d285d7429c5 1-45
+.agent/.shared/ui-ux-pro-max/scripts/search.py
+  h_709d285d7429c5 1-106
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+  h_709d285d7429c5 1-8
+docs/plans/2026-03-11-iap-revenuecat-e2e-fix-plan.md
+  h_709d285d7429c5 1-261
+.agents/skills/seo-fundamentals/scripts/seo_checker.py
+  h_709d285d7429c5 1-219
+lib/shared/widgets/main_shell.dart
+  h_709d285d7429c5 1-89
+.agent/skills/nextjs-react-expert/4-client-client-side-data-fetching.md
+  h_709d285d7429c5 1-264
+admin/lib/shared/widgets/error_state_widget.dart
+  h_709d285d7429c5 1-141
+docs/iap-revenuecat-setup-log-2026-03-11.md
+  h_709d285d7429c5 1-135
+test/features/subscription/presentation/providers/subscription_provider_test.dart
+  h_709d285d7429c5 1-189
+.agents/skills/frontend-design/scripts/accessibility_checker.py
+  h_709d285d7429c5 1-183
+.agents/skills/database-design/database-selection.md
+  h_709d285d7429c5 1-43
+admin/web/index.html
+  h_709d285d7429c5 1-38
+lib/features/auth/domain/providers/onboarding_provider.g.dart
+  h_709d285d7429c5 1-30
+.agents/.shared/ui-ux-pro-max/data/stacks/nuxtjs.csv
+  h_709d285d7429c5 1-59
+windows/CMakeLists.txt
+  h_709d285d7429c5 1-108
+test/features/template_engine/presentation/view_models/generation_view_model_test.dart
+  h_709d285d7429c5 1-267
+docs/gemini/gemini-3.1-flash-image-preview.md
+  h_709d285d7429c5 1-24
+.agent/.shared/ui-ux-pro-max/data/stacks/html-tailwind.csv
+  h_709d285d7429c5 1-56
+.gitignore
+  h_709d285d7429c5 1-218
+test/features/settings/presentation/screens/settings_screen_test.dart
+  h_709d285d7429c5 1-190
+.agents/skills/in-app-purchases/analytics.md
+  h_709d285d7429c5 1-265
+admin/web/manifest.json
+  h_709d285d7429c5 1-35
+supabase/functions/_shared/cors.ts
+  h_709d285d7429c5 1-29
+test/features/create/presentation/view_models/create_view_model_test.dart
+  h_709d285d7429c5 1-565
+supabase/migrations/20260222130000_add_input_image_paths.sql
+  h_709d285d7429c5 1-9
+lib/features/auth/presentation/screens/forgot_password_screen.dart
+  h_709d285d7429c5 1-151
+.agent/skills/mobile-design/mobile-typography.md
+  h_709d285d7429c5 1-433
+.agent/skills/launch-strategy/SKILL.md
+  h_709d285d7429c5 1-353
+test/features/subscription/data/repositories/purchase_ref_logic_test.dart
+  h_709d285d7429c5 1-94
+.agent/.shared/ui-ux-pro-max/data/stacks/react-native.csv
+  h_709d285d7429c5 1-52
+.agent/skills/app-builder/templates/nextjs-static/TEMPLATE.md
+  h_709d285d7429c5 1-169
+.agents/.shared/ui-ux-pro-max/data/stacks/svelte.csv
+  h_709d285d7429c5 1-54
+docs/plans/2026-03-15-ui-insets-paywall-compliance-plan.md
+  h_709d285d7429c5 1-731
+.agents/skills/game-development/mobile-games/SKILL.md
+  h_709d285d7429c5 1-108
+.agents/skills/game-development/3d-games/SKILL.md
+  h_709d285d7429c5 1-135
+lib/features/gallery/presentation/providers/gallery_provider.dart
+  h_709d285d7429c5 1-86
+.agent/skills/app-builder/templates/python-fastapi/TEMPLATE.md
+  h_709d285d7429c5 1-83
+android/app/src/main/res/drawable/launch_background.xml
+  h_709d285d7429c5 1-12
+.agent/.shared/ui-ux-pro-max/data/typography.csv
+  h_709d285d7429c5 1-58
+.agents/scripts/auto_preview.py
+  h_709d285d7429c5 1-148
+test/core/mocks/mock_supabase_client.dart
+  h_709d285d7429c5 1-50
+supabase/migrations/20260127000000_create_templates_table.sql
+  h_709d285d7429c5 1-47
+admin/lib/features/auth/providers/admin_auth_provider.dart
+  h_709d285d7429c5 1-61
+.agents/skills/api-patterns/trpc.md
+  h_709d285d7429c5 1-41
+test/features/auth/presentation/screens/forgot_password_screen_test.dart
+  h_709d285d7429c5 1-83
+ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+  h_709d285d7429c5 1-8
+pubspec.lock
+  h_709d285d7429c5 1-1734
+lib/features/AGENTS.md
+  h_709d285d7429c5 1-49
+docs/plans/2026-03-16-pm-review-roadmap-design.md
+  h_709d285d7429c5 1-145
+.agent/agents/backend-specialist.md
+  h_709d285d7429c5 1-263
+scripts/setup_search.ps1
+  h_709d285d7429c5 1-97
+lib/features/template_engine/domain/entities/template_model.dart
+  h_709d285d7429c5 1-27
+.agents/skills/frontend-design/SKILL.md
+  h_709d285d7429c5 1-418
+lib/features/settings/presentation/widgets/settings_helpers.dart
+  h_709d285d7429c5 1-137
+test/features/template_engine/data/policies/credit_check_policy_test.dart
+  h_709d285d7429c5 1-125
+ios/Runner/PrivacyInfo.xcprivacy
+  h_709d285d7429c5 1-111
+integration_test/gallery_flow_test.dart
+  h_709d285d7429c5 1-165
+.agent/agents/qa-automation-engineer.md
+  h_709d285d7429c5 1-103
+.agent/skills/frontend-design/scripts/accessibility_checker.py
+  h_709d285d7429c5 1-183
+.agent/.shared/ui-ux-pro-max/data/icons.csv
+  h_709d285d7429c5 1-101
+.agent/skills/frontend-design/typography-system.md
+  h_709d285d7429c5 1-345
+docs/system-architecture.md
+  h_709d285d7429c5 1-879
+scripts/validate-templates.ps1
+  h_709d285d7429c5 1-58
+lib/features/auth/presentation/screens/splash_screen.dart
+  h_709d285d7429c5 1-211
+.agents/skills/performance-profiling/scripts/lighthouse_audit.py
+  h_709d285d7429c5 1-76
+lib/features/credits/presentation/providers/credit_balance_provider.g.dart
+  h_709d285d7429c5 1-30
+admin/.env.example
+  h_709d285d7429c5 1-2
+.agent/.shared/ui-ux-pro-max/data/landing.csv
+  h_709d285d7429c5 1-31
+admin/lib/core/theme/admin_colors.dart
+  h_709d285d7429c5 1-47
+.agents/skills/api-patterns/security-testing.md
+  h_709d285d7429c5 1-122
+.agents/skills/doc.md
+  h_709d285d7429c5 1-177
+.agent/ARCHITECTURE.md
+  h_709d285d7429c5 1-288
+.agents/skills/paywall-upgrade-cro/evals/evals.json
+  h_709d285d7429c5 1-93
+test/features/gallery/presentation/widgets/shimmer_grid_test.dart
+  h_709d285d7429c5 1-34
+.agents/.shared/ui-ux-pro-max/data/stacks/shadcn.csv
+  h_709d285d7429c5 1-61
+.agents/skills/mobile-design/mobile-testing.md
+  h_709d285d7429c5 1-356
+.agent/skills/vulnerability-scanner/SKILL.md
+  h_709d285d7429c5 1-276
+supabase/migrations/20260128130000_add_25_templates.sql
+  h_709d285d7429c5 1-351
+lib/utils/logger_service.dart
+  h_709d285d7429c5 1-26
+ios/Podfile
+  h_709d285d7429c5 1-43
+.agents/skills/app-builder/templates/monorepo-turborepo/TEMPLATE.md
+  h_709d285d7429c5 1-90
+.agent/skills/mobile-design/mobile-design-thinking.md
+  h_709d285d7429c5 1-357
+test/features/gallery/domain/entities/gallery_item_test.dart
+  h_709d285d7429c5 1-198
+docs/kie-api/kie-model-map.md
+  h_709d285d7429c5 1-102
+lib/core/state/user_scoped_providers.dart
+  h_709d285d7429c5 1-24
+.agent/scripts/verify_all.py
+  h_709d285d7429c5 1-327
+test/core/fixtures/template_fixtures.dart
+  h_709d285d7429c5 1-94
+supabase/migrations/20260220160000_create_pending_ad_rewards.sql
+  h_709d285d7429c5 1-141
+lib/features/auth/data/repositories/auth_repository.g.dart
+  h_709d285d7429c5 1-27
+lib/features/create/domain/entities/create_form_state.freezed.dart
+  h_709d285d7429c5 1-282
+implementation_notes.html
+  h_709d285d7429c5 1-53
+.agents/.shared/ui-ux-pro-max/data/stacks/jetpack-compose.csv
+  h_709d285d7429c5 1-53
+docs/plans/2026-03-11-iap-final-fix.md
+  h_709d285d7429c5 1-484
+lib/features/create/presentation/providers/create_form_provider.dart
+  h_709d285d7429c5 1-65
+lib/core/design_system/app_shadows.dart
+  h_709d285d7429c5 1-95
+test/features/gallery/presentation/widgets/interactive_gallery_item_test.dart
+  h_709d285d7429c5 1-211
+.agents/skills/nextjs-react-expert/2-bundle-bundle-size-optimization.md
+  h_709d285d7429c5 1-240
+test/features/auth/presentation/view_models/auth_view_model_redirect_test.dart
+  h_709d285d7429c5 1-186
+.agents/skills/google-play-publishing/SKILL.md
+  h_709d285d7429c5 1-114
+lib/core/config/env_config.dart
+  h_709d285d7429c5 1-56
+windows/.gitignore
+  h_709d285d7429c5 1-17
+lib/theme/app_colors.dart
+  h_709d285d7429c5 1-130
+lib/features/gallery/presentation/widgets/masonry_image_grid.dart
+  h_709d285d7429c5 1-233
+.agent/skills/architecture/examples.md
+  h_709d285d7429c5 1-94
+lib/features/credits/presentation/providers/credit_history_provider.dart
+  h_709d285d7429c5 1-16
+.agents/skills/frontend-design/color-system.md
+  h_709d285d7429c5 1-311
+scripts/validate-all.ps1
+  h_709d285d7429c5 1-42
+.agent/agents/debugger.md
+  h_709d285d7429c5 1-225
+.agent/skills/deployment-procedures/SKILL.md
+  h_709d285d7429c5 1-241
+.agents/skills/performance-profiling/SKILL.md
+  h_709d285d7429c5 1-143
+lib/features/template_engine/domain/repositories/i_template_repository.dart
+  h_709d285d7429c5 1-9
+.agents/.shared/ui-ux-pro-max/scripts/search.py
+  h_709d285d7429c5 1-106
+.agents/workflows/enhance.md
+  h_709d285d7429c5 1-63
+.agents/skills/game-development/game-design/SKILL.md
+  h_709d285d7429c5 1-129
+lib/features/gallery/presentation/pages/image_viewer_page.dart
+  h_709d285d7429c5 1-304
+docs/plans/2026-03-25-pr84-review-fixes-plan.md
+  h_709d285d7429c5 1-431
+docs/kie-api/google/imagen4-fast.md
+  h_709d285d7429c5 1-289
+.agent/skills/mobile-design/mobile-debugging.md
+  h_709d285d7429c5 1-122
+lib/features/template_engine/domain/entities/generation_options_model.dart
+  h_709d285d7429c5 1-22
+test/core/providers/connectivity_provider_test.dart
+  h_709d285d7429c5 1-46
+admin/lib/core/router/app_router.g.dart
+  h_709d285d7429c5 1-27
+lib/features/subscription/data/repositories/subscription_repository.g.dart
+  h_709d285d7429c5 1-30
+plans/templates/bug-fix-template.md
+  h_709d285d7429c5 1-69
+lib/features/gallery/presentation/widgets/shimmer_grid.dart
+  h_709d285d7429c5 1-53
+docs/kie-api/google/nano-banana-pro.md
+  h_709d285d7429c5 1-292
+test/features/gallery/presentation/widgets/empty_gallery_state_test.dart
+  h_709d285d7429c5 1-67
+.agent/skills/in-app-purchases/google-play.md
+  h_709d285d7429c5 1-177
+admin/pubspec.yaml
+  h_709d285d7429c5 1-47
+.agent/agents/product-manager.md
+  h_709d285d7429c5 1-112
+lib/features/template_engine/data/services/template_cache_service.dart
+  h_709d285d7429c5 1-97
+.agents/skills/nextjs-react-expert/8-advanced-advanced-patterns.md
+  h_709d285d7429c5 1-150
+lib/core/AGENTS.md
+  h_709d285d7429c5 1-45
+docs/plans/2026-03-27-account-deletion-design.md
+  h_709d285d7429c5 1-77
+.agent/skills/paywall-upgrade-cro/SKILL.md
+  h_709d285d7429c5 1-227
+.agents/skills/architecture/pattern-selection.md
+  h_709d285d7429c5 1-68
+.agents/skills/app-builder/templates/python-fastapi/TEMPLATE.md
+  h_709d285d7429c5 1-83
+docs/plans/2026-03-25-iap-skill-update-design.md
+  h_709d285d7429c5 1-132
+.agent/skills/mobile-design/platform-android.md
+  h_709d285d7429c5 1-666
+.agents/skills/plan-writing/SKILL.md
+  h_709d285d7429c5 1-152
+.agents/skills/testing-patterns/SKILL.md
+  h_709d285d7429c5 1-178
+.agents/.shared/ui-ux-pro-max/data/stacks/html-tailwind.csv
+  h_709d285d7429c5 1-56
+supabase/migrations/20260222140000_add_model_id_to_generation_jobs.sql
+  h_709d285d7429c5 1-6
+.agents/skills/nextjs-react-expert/1-async-eliminating-waterfalls.md
+  h_709d285d7429c5 1-312
+lib/features/auth/presentation/state/auth_state.freezed.dart
+  h_709d285d7429c5 1-807
+.agent/skills/database-design/database-selection.md
+  h_709d285d7429c5 1-43
+.agents/skills/mobile-design/platform-android.md
+  h_709d285d7429c5 1-666
+lib/features/gallery/domain/entities/gallery_item.freezed.dart
+  h_709d285d7429c5 1-431
+.agent/skills/database-design/optimization.md
+  h_709d285d7429c5 1-36
+docs/plans/2026-03-16-p1-monetization.md
+  h_709d285d7429c5 1-574
+.agent/skills/webapp-testing/scripts/playwright_runner.py
+  h_709d285d7429c5 1-173
+docs/kie-api/gpt-image/gpt-image-1.5-text-to-image.md
+  h_709d285d7429c5 1-270
+.agent/scripts/auto_preview.py
+  h_709d285d7429c5 1-148
+lib/shared/widgets/output_format_toggle.dart
+  h_709d285d7429c5 1-66
+.agent/skills/rust-pro/SKILL.md
+  h_709d285d7429c5 1-176
+admin/lib/features/templates/presentation/pages/templates_page.dart
+  h_709d285d7429c5 1-343
+lib/features/template_engine/domain/entities/generation_job_model.g.dart
+  h_709d285d7429c5 1-57
+.agents/skills/app-builder/scaffolding.md
+  h_709d285d7429c5 1-118
+test/features/template_engine/presentation/widgets/template_card_test.dart
+  h_709d285d7429c5 1-103
+lib/features/template_engine/domain/entities/input_field_model.dart
+  h_709d285d7429c5 1-23
+test/features/credits/presentation/providers/ad_reward_provider_test.dart
+  h_709d285d7429c5 1-171
+lib/shared/widgets/model_selector.dart
+  h_709d285d7429c5 1-186
+lib/features/credits/domain/providers/credit_repository_provider.dart
+  h_709d285d7429c5 1-2
+ios/Flutter/AppFrameworkInfo.plist
+  h_709d285d7429c5 1-24
+.agents/skills/brainstorming/dynamic-questioning.md
+  h_709d285d7429c5 1-350
+lib/features/template_engine/presentation/providers/generation_policy_provider.dart
+  h_709d285d7429c5 1-11
+lib/core/utils/watermark_util.dart
+  h_709d285d7429c5 1-84
+.agent/skills/game-development/game-design/SKILL.md
+  h_709d285d7429c5 1-129
+admin/lib/main.dart
+  h_709d285d7429c5 1-52
+.agents/agents/devops-engineer.md
+  h_709d285d7429c5 1-242
+docs/plans/2026-03-12-verify-google-purchase.md
+  h_709d285d7429c5 1-488
+.agent/agents/security-auditor.md
+  h_709d285d7429c5 1-170
+.agents/skills/nextjs-react-expert/scripts/react_performance_checker.py
+  h_709d285d7429c5 1-252
+.agents/skills/database-design/migrations.md
+  h_709d285d7429c5 1-48
+.agent/skills/game-development/SKILL.md
+  h_709d285d7429c5 1-167
+.agent/agents/performance-optimizer.md
+  h_709d285d7429c5 1-187
+CHANGELOG.md
+  h_709d285d7429c5 1-25
+lib/features/subscription/presentation/providers/subscription_provider.g.dart
+  h_709d285d7429c5 1-50
+supabase/AGENTS.md
+  h_709d285d7429c5 1-57
+android/app/src/main/kotlin/com/artio/artio/MainActivity.kt
+  h_709d285d7429c5 1-5
+lib/features/settings/domain/providers/notifications_provider.dart
+  h_709d285d7429c5 1-2
+lib/features/template_engine/presentation/widgets/template_card.dart
+  h_709d285d7429c5 1-196
+.agent/skills/in-app-purchases/paywalls.md
+  h_709d285d7429c5 1-272
+test/features/template_engine/data/repositories/template_repository_test.dart
+  h_709d285d7429c5 1-149
+.agents/skills/server-management/SKILL.md
+  h_709d285d7429c5 1-161
+test/features/auth/presentation/view_models/auth_view_model_test.dart
+  h_709d285d7429c5 1-568
+lib/features/subscription/domain/entities/subscription_package.dart
+  h_709d285d7429c5 1-30
+.agent/skills/app-builder/SKILL.md
+  h_709d285d7429c5 1-75
+lib/features/template_engine/domain/providers/template_repository_provider.dart
+  h_709d285d7429c5 1-2
+lib/core/services/storage_url_service.g.dart
+  h_709d285d7429c5 1-335
+test/features/auth/data/repositories/auth_repository_test.dart
+  h_709d285d7429c5 1-257
+lib/features/auth/domain/providers/auth_repository_provider.dart
+  h_709d285d7429c5 1-2
+lib/features/credits/domain/entities/credit_transaction.freezed.dart
+  h_709d285d7429c5 1-332
+test/shared/widgets/watermark_overlay_test.dart
+  h_709d285d7429c5 1-77
+.agents/skills/launch-strategy/evals/evals.json
+  h_709d285d7429c5 1-91
+.agent/agents/frontend-specialist.md
+  h_709d285d7429c5 1-593
+.agent/skills/game-development/web-games/SKILL.md
+  h_709d285d7429c5 1-150
+lib/features/template_engine/domain/entities/template_model.freezed.dart
+  h_709d285d7429c5 1-406
+.agent/.shared/ui-ux-pro-max/data/stacks/nextjs.csv
+  h_709d285d7429c5 1-53
+test/features/gallery/data/repositories/gallery_repository_test.dart
+  h_709d285d7429c5 1-308
+admin/lib/core/theme/app_theme.dart
+  h_709d285d7429c5 1-179
+lib/core/services/haptic_service.dart
+  h_709d285d7429c5 1-69
+.agent/skills/frontend-design/motion-graphics.md
+  h_709d285d7429c5 1-306
+test/shared/widgets/image_count_dropdown_test.dart
+  h_709d285d7429c5 1-71
+test/features/gallery/presentation/pages/gallery_page_test.dart
+  h_709d285d7429c5 1-111
+lib/features/gallery/presentation/constants/gallery_strings.dart
+  h_709d285d7429c5 1-8
+integration_test/helpers/test_app.dart
+  h_709d285d7429c5 1-30
+supabase/functions/sync-subscription/index.ts
+  h_709d285d7429c5 1-252
+supabase/migrations/20260218100000_create_reward_ad_function.sql
+  h_709d285d7429c5 1-61
+.agents/.shared/ui-ux-pro-max/data/styles.csv
+  h_709d285d7429c5 1-59
+.agent/skills/tailwind-patterns/SKILL.md
+  h_709d285d7429c5 1-269
+.agents/skills/game-development/pc-games/SKILL.md
+  h_709d285d7429c5 1-144
+.agent/skills/game-development/game-art/SKILL.md
+  h_709d285d7429c5 1-185
+.agents/.shared/ui-ux-pro-max/data/stacks/flutter.csv
+  h_709d285d7429c5 1-53
+.agents/.shared/ui-ux-pro-max/scripts/core.py
+  h_709d285d7429c5 1-258
+.agent/skills/mobile-design/mobile-performance.md
+  h_709d285d7429c5 1-767
+.agents/skills/app-builder/templates/SKILL.md
+  h_709d285d7429c5 1-39
+lib/core/design_system/app_gradients.dart
+  h_709d285d7429c5 1-91
+.agents/skills/nextjs-react-expert/7-js-javascript-performance.md
+  h_709d285d7429c5 1-684
+lib/routing/routes/app_routes.dart
+  h_709d285d7429c5 1-191
+.agents/.shared/ui-ux-pro-max/data/prompts.csv
+  h_709d285d7429c5 1-24
+devtools_options.yaml
+  h_709d285d7429c5 1-3
+.agent/skills/mobile-design/touch-psychology.md
+  h_709d285d7429c5 1-537
+.agents/.shared/ui-ux-pro-max/data/ux-guidelines.csv
+  h_709d285d7429c5 1-100
+.agent/skills/behavioral-modes/SKILL.md
+  h_709d285d7429c5 1-242
+.agents/skills/clean-code/SKILL.md
+  h_709d285d7429c5 1-201
+analysis_options.yaml
+  h_709d285d7429c5 1-14
+.agents/workflows/create.md
+  h_709d285d7429c5 1-59
+test/core/helpers/helpers.dart
+  h_709d285d7429c5 1-8
+lib/features/template_engine/domain/entities/generation_job_model.dart
+  h_709d285d7429c5 1-45
+plans/templates/feature-implementation-template.md
+  h_709d285d7429c5 1-84
+lib/features/gallery/presentation/pages/gallery_page.dart
+  h_709d285d7429c5 1-323
+ios/Runner/Runner-Bridging-Header.h
+  h_709d285d7429c5 1
+.agent/skills/app-builder/scaffolding.md
+  h_709d285d7429c5 1-118
+.agents/skills/frontend-design/decision-trees.md
+  h_709d285d7429c5 1-418
+supabase/migrations/20260219000001_restrict_profiles_update_rls.sql
+  h_709d285d7429c5 1-28
+.agent/skills/app-builder/templates/nuxt-app/TEMPLATE.md
+  h_709d285d7429c5 1-134
+.agent/skills/geo-fundamentals/scripts/geo_checker.py
+  h_709d285d7429c5 1-289
+.agents/skills/app-builder/templates/express-api/TEMPLATE.md
+  h_709d285d7429c5 1-83
+test/features/subscription/domain/entities/subscription_status_test.dart
+  h_709d285d7429c5 1-84
+docs/kie-api/flux2/flux2-flex-image-to-image.md
+  h_709d285d7429c5 1-275
+test/routing/app_router_test.dart
+  h_709d285d7429c5 1-193
+.agent/.shared/ui-ux-pro-max/data/stacks/jetpack-compose.csv
+  h_709d285d7429c5 1-53
+docs/admin-templates/03-cross-model-compatibility.md
+  h_709d285d7429c5 1-128
+.agents/skills/in-app-purchases/revenuecat.md
+  h_709d285d7429c5 1-309
+lib/features/auth/presentation/screens/onboarding_screen.dart
+  h_709d285d7429c5 1-291
+lib/features/auth/domain/entities/user_model.g.dart
+  h_709d285d7429c5 1-35
+.agent/.shared/ui-ux-pro-max/data/react-performance.csv
+  h_709d285d7429c5 1-45
+.agent/skills/api-patterns/security-testing.md
+  h_709d285d7429c5 1-122
+lib/features/template_engine/presentation/providers/template_provider.dart
+  h_709d285d7429c5 1-18
+test/features/template_engine/presentation/widgets/template_grid_test.dart
+  h_709d285d7429c5 1-88
+.agent/skills/nextjs-react-expert/6-rendering-rendering-performance.md
+  h_709d285d7429c5 1-432
+.agents/agents/qa-automation-engineer.md
+  h_709d285d7429c5 1-103
+CLAUDE.md
+  h_709d285d7429c5 1-219
+.agents/.shared/ui-ux-pro-max/data/stacks/react.csv
+  h_709d285d7429c5 1-54
+.agent/agents/test-engineer.md
+  h_709d285d7429c5 1-158
+lib/features/template_engine/presentation/widgets/input_field_builder.dart
+  h_709d285d7429c5 1-150
+.agent/skills/api-patterns/SKILL.md
+  h_709d285d7429c5 1-81
+.agents/skills/parallel-agents/SKILL.md
+  h_709d285d7429c5 1-175
+test/AGENTS.md
+  h_709d285d7429c5 1-59
+.agent/skills/database-design/scripts/schema_validator.py
+  h_709d285d7429c5 1-172
+.agents/skills/game-development/game-audio/SKILL.md
+  h_709d285d7429c5 1-190
+.agent/skills/in-app-purchases/server.md
+  h_709d285d7429c5 1-241
+.agents/skills/app-builder/templates/astro-static/TEMPLATE.md
+  h_709d285d7429c5 1-76
+.env.example
+  h_709d285d7429c5 1-63
+lib/features/auth/domain/repositories/i_auth_repository.dart
+  h_709d285d7429c5 1-28
+test/shared/widgets/animated_retry_button_test.dart
+  h_709d285d7429c5 1-50
+.agents/skills/game-development/vr-ar/SKILL.md
+  h_709d285d7429c5 1-123
+.agents/skills/nextjs-react-expert/3-server-server-side-performance.md
+  h_709d285d7429c5 1-490
+.agent/.shared/ui-ux-pro-max/data/products.csv
+  h_709d285d7429c5 1-97
+.agent/skills/api-patterns/auth.md
+  h_709d285d7429c5 1-24
+test/features/template_engine/presentation/providers/generation_options_provider_test.dart
+  h_709d285d7429c5 1-100
+.agent/.shared/ui-ux-pro-max/data/stacks/react.csv
+  h_709d285d7429c5 1-54
+android/app/src/profile/AndroidManifest.xml
+  h_709d285d7429c5 1-7
+lib/features/credits/domain/entities/credit_balance.dart
+  h_709d285d7429c5 1-17
+lib/features/settings/data/notifications_provider.dart
+  h_709d285d7429c5 1-39
+test/core/utils/subagent_smoke_codegen_test.dart
+  h_709d285d7429c5 1-8
+scripts/validate-skills.ps1
+  h_709d285d7429c5 1-68
+admin/lib/features/dashboard/domain/entities/dashboard_stats.freezed.dart
+  h_709d285d7429c5 1-287
+.agent/skills/architecture/patterns-reference.md
+  h_709d285d7429c5 1-50
+.agent/skills/analytics-tracking/references/gtm-implementation.md
+  h_709d285d7429c5 1-390
+lib/shared/widgets/section_header.dart
+  h_709d285d7429c5 1-34
+supabase/migrations/20260315120000_fix_grant_credits_advisory_lock_and_recent_guard.sql
+  h_709d285d7429c5 1-84
+.agents/skills/architecture/examples.md
+  h_709d285d7429c5 1-94
+android/app/src/main/AndroidManifest.xml
+  h_709d285d7429c5 1-59
+supabase/migrations/20260304000003_fix_medium_issues.sql
+  h_709d285d7429c5 1-43
+.agent/skills/nextjs-react-expert/SKILL.md
+  h_709d285d7429c5 1-286
+lib/core/utils/url_launcher_utils.dart
+  h_709d285d7429c5 1-82
+test/shared/widgets/main_shell_test.dart
+  h_709d285d7429c5 1-84
+admin/pubspec.lock
+  h_709d285d7429c5 1-1194
+lib/features/template_engine/data/repositories/template_repository.dart
+  h_709d285d7429c5 1-152
+test/features/auth/presentation/screens/splash_screen_reduced_motion_test.dart
+  h_709d285d7429c5 1-51
+lib/core/state/credit_balance_state_provider.dart
+  h_709d285d7429c5 1-2
+lib/core/config/sentry_config.dart
+  h_709d285d7429c5 1-26
+.agent/skills/in-app-purchases/testing.md
+  h_709d285d7429c5 1-359
+docs/project-roadmap.md
+  h_709d285d7429c5 1-324
+lib/theme/app_button_themes.dart
+  h_709d285d7429c5 1-81
+.agent/skills/app-builder/templates/cli-tool/TEMPLATE.md
+  h_709d285d7429c5 1-88
+.agents/skills/architecture/SKILL.md
+  h_709d285d7429c5 1-55
+lib/core/exceptions/app_exception.freezed.dart
+  h_709d285d7429c5 1-1218
+lib/features/gallery/data/services/gallery_cache_service.g.dart
+  h_709d285d7429c5 1-29
+android/app/src/main/res/values-night/styles.xml
+  h_709d285d7429c5 1-18
+.agents/skills/nodejs-best-practices/SKILL.md
+  h_709d285d7429c5 1-333
+test/core/utils/date_time_utils_test.dart
+  h_709d285d7429c5 1-42
+.agents/skills/app-builder/templates/electron-desktop/TEMPLATE.md
+  h_709d285d7429c5 1-88
+supabase/functions/revenuecat-webhook/index.ts
+  h_709d285d7429c5 1-410
+.agent/workflows/plan.md
+  h_709d285d7429c5 1-89
+.agents/skills/database-design/schema-design.md
+  h_709d285d7429c5 1-56
+.agents/agents/documentation-writer.md
+  h_709d285d7429c5 1-104
+test/shared/widgets/error_state_widget_reduced_motion_test.dart
+  h_709d285d7429c5 1-50
+.agent/skills/analytics-tracking/references/ga4-implementation.md
+  h_709d285d7429c5 1-300
+lib/features/template_engine/domain/entities/template_model.g.dart
+  h_709d285d7429c5 1-37
+lib/features/auth/data/repositories/auth_repository.dart
+  h_709d285d7429c5 1-264
+.agent/workflows/status.md
+  h_709d285d7429c5 1-86
+test/core/helpers/riverpod_test_utils.dart
+  h_709d285d7429c5 1-41
+.agent/agents/explorer-agent.md
+  h_709d285d7429c5 1-73
+lib/features/credits/domain/entities/credit_transaction.dart
+  h_709d285d7429c5 1-34
+ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+  h_709d285d7429c5 1-8
+.agent/skills/testing-patterns/SKILL.md
+  h_709d285d7429c5 1-178
+.agents/skills/frontend-design/visual-effects.md
+  h_709d285d7429c5 1-383
+.agent/.shared/ui-ux-pro-max/scripts/core.py
+  h_709d285d7429c5 1-258
+.agents/skills/nextjs-react-expert/5-rerender-re-render-optimization.md
+  h_709d285d7429c5 1-581
+lib/features/settings/presentation/widgets/settings_sections.dart
+  h_709d285d7429c5 1-287
+.agent/skills/mobile-design/decision-trees.md
+  h_709d285d7429c5 1-516
+scripts/validate-workflows.ps1
+  h_709d285d7429c5 1-59
+.agent/.shared/ui-ux-pro-max/data/stacks/swiftui.csv
+  h_709d285d7429c5 1-51
+lib/features/template_engine/presentation/widgets/template_grid.dart
+  h_709d285d7429c5 1-251
+.agent/agents/seo-specialist.md
+  h_709d285d7429c5 1-111
+.agents/skills/rust-pro/SKILL.md
+  h_709d285d7429c5 1-176
+docs/plans/2026-03-11-iap-revenuecat-e2e-fix.md
+  h_709d285d7429c5 1-160
+TODOS.md
+  h_709d285d7429c5 1-38
+ios/.gitignore
+  h_709d285d7429c5 1-34
+lib/features/create/presentation/widgets/generation_starting_overlay.dart
+  h_709d285d7429c5 1-34
+supabase/migrations/20260331071910_admin_revenue_rls.sql
+  h_709d285d7429c5 1-18
+.agents/agents/seo-specialist.md
+  h_709d285d7429c5 1-111
+.agents/agents/code-archaeologist.md
+  h_709d285d7429c5 1-106
+.agents/skills/python-patterns/SKILL.md
+  h_709d285d7429c5 1-441
+admin/lib/core/router/app_router.dart
+  h_709d285d7429c5 1-68
+.agents/skills/i18n-localization/scripts/i18n_checker.py
+  h_709d285d7429c5 1-241
+.agents/skills/lint-and-validate/scripts/lint_runner.py
+  h_709d285d7429c5 1-184
+.agent/workflows/ui-ux-pro-max.md
+  h_709d285d7429c5 1-296
+lib/features/gallery/presentation/pages/image_viewer_action_helper.dart
+  h_709d285d7429c5 1-71
+.agents/skills/app-builder/templates/chrome-extension/TEMPLATE.md
+  h_709d285d7429c5 1-92
+lib/features/create/domain/entities/create_form_state.dart
+  h_709d285d7429c5 1-56
+lib/features/create/presentation/widgets/credit_balance_chip.dart
+  h_709d285d7429c5 1-46
+lib/shared/widgets/loading_state_widget.dart
+  h_709d285d7429c5 1-272
+test/core/fixtures/gallery_item_fixtures.dart
+  h_709d285d7429c5 1-92
+.agent/skills/frontend-design/ux-psychology.md
+  h_709d285d7429c5 1-1116
+.agent/skills/database-design/indexing.md
+  h_709d285d7429c5 1-39
+supabase/functions/_shared/credit_logic_test.ts
+  h_709d285d7429c5 1-79
+ios/RunnerTests/RunnerTests.swift
+  h_709d285d7429c5 1-12
+test/features/create/domain/entities/create_form_state_test.dart
+  h_709d285d7429c5 1-87
+lib/features/subscription/domain/entities/subscription_status.dart
+  h_709d285d7429c5 1-42
+lib/features/settings/presentation/settings_screen.dart
+  h_709d285d7429c5 1-229
+test/features/template_engine/data/repositories/generation_repository_test.dart
+  h_709d285d7429c5 1-646
+admin/.metadata
+  h_709d285d7429c5 1-30
+docs/plans/2026-03-15-restore-purchases-settings-iap-skill.md
+  h_709d285d7429c5 1-351
+.agent/skills/architecture/trade-off-analysis.md
+  h_709d285d7429c5 1-77
+lib/features/template_engine/presentation/widgets/generation_progress.dart
+  h_709d285d7429c5 1-161
+test/features/template_engine/presentation/widgets/input_field_builder_test.dart
+  h_709d285d7429c5 1-182
+admin/lib/features/auth/providers/admin_auth_provider.g.dart
+  h_709d285d7429c5 1-26
+admin/lib/features/templates/presentation/widgets/template_card.dart
+  h_709d285d7429c5 1-229
+lib/features/template_engine/domain/entities/input_field_model.g.dart
+  h_709d285d7429c5 1-37
+lib/features/credits/presentation/widgets/insufficient_credits_sheet.dart
+  h_709d285d7429c5 1-236
+lib/theme/theme_provider.dart
+  h_709d285d7429c5 1-29
+supabase/functions/_shared/model_config_test.ts
+  h_709d285d7429c5 1-134
+.agents/workflows/status.md
+  h_709d285d7429c5 1-86
+.agents/agents/product-owner.md
+  h_709d285d7429c5 1-95
+lib/core/utils/prompt_validator.dart
+  h_709d285d7429c5 1-26
+.agents/skills/mobile-design/mobile-typography.md
+  h_709d285d7429c5 1-433
+lib/features/template_engine/domain/entities/generation_options_model.freezed.dart
+  h_709d285d7429c5 1-288
+.agents/skills/app-builder/agent-coordination.md
+  h_709d285d7429c5 1-71
+.agents/skills/geo-fundamentals/SKILL.md
+  h_709d285d7429c5 1-156
+.agent/skills/app-builder/templates/nextjs-saas/TEMPLATE.md
+  h_709d285d7429c5 1-122
+.agent/skills/app-builder/templates/flutter-app/TEMPLATE.md
+  h_709d285d7429c5 1-90
+.agents/skills/in-app-purchases/flutter.md
+  h_709d285d7429c5 1-221
+.agent/skills/nextjs-react-expert/3-server-server-side-performance.md
+  h_709d285d7429c5 1-490
+.agents/skills/game-development/game-art/SKILL.md
+  h_709d285d7429c5 1-185
+.agent/skills/clean-code/SKILL.md
+  h_709d285d7429c5 1-201
+.agents/skills/behavioral-modes/SKILL.md
+  h_709d285d7429c5 1-242
+supabase/migrations/20260304100000_fix_credit_idempotency_and_rc_index.sql
+  h_709d285d7429c5 1-56
+docs/plans/2026-03-15-ui-insets-paywall-compliance-design.md
+  h_709d285d7429c5 1-177
+lib/features/credits/presentation/widgets/premium_model_sheet.dart
+  h_709d285d7429c5 1-54
+admin/test/features/templates/domain/entities/admin_template_model_test.dart
+  h_709d285d7429c5 1-117
+docs/plans/2026-03-27-account-deletion.md
+  h_709d285d7429c5 1-598
+ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+  h_709d285d7429c5 1-23
+.agent/skills/google-play-publishing/examples/artio-ai-photo.md
+  h_709d285d7429c5 1-121
+.agent/skills/in-app-purchases/platforms.md
+  h_709d285d7429c5 1-213
+supabase/migrations/20260128115551_add_deleted_at_and_storage_bucket.sql
+  h_709d285d7429c5 1-82
+lib/core/state/subscription_state_provider.dart
+  h_709d285d7429c5 1-2
+.agent/skills/in-app-purchases/analytics.md
+  h_709d285d7429c5 1-265
+.agent/skills/doc.md
+  h_709d285d7429c5 1-177
+test/integration/supabase_test_setup.dart
+  h_709d285d7429c5 1-86
+lib/shared/widgets/image_count_dropdown.dart
+  h_709d285d7429c5 1-42
+lib/features/template_engine/domain/policies/generation_policy.dart
+  h_709d285d7429c5 1-28
+.agents/skills/mobile-design/mobile-backend.md
+  h_709d285d7429c5 1-491
+lib/shared/widgets/error_illustration.dart
+  h_709d285d7429c5 1-70
+.agents/workflows/plan.md
+  h_709d285d7429c5 1-89
+lib/features/subscription/domain/entities/subscription_status.freezed.dart
+  h_709d285d7429c5 1-242
+.agents/agents/frontend-specialist.md
+  h_709d285d7429c5 1-593
+.agent/skills/google-play-publishing/checklist-template.md
+  h_709d285d7429c5 1-157
+.agents/skills/brainstorming/SKILL.md
+  h_709d285d7429c5 1-163
+docs/project-overview-pdr.md
+  h_709d285d7429c5 1-602
+lib/features/credits/domain/repositories/i_credit_repository.dart
+  h_709d285d7429c5 1-30
+windows/runner/win32_window.h
+  h_709d285d7429c5 1-102
+.agents/skills/api-patterns/rest.md
+  h_709d285d7429c5 1-40
+supabase/functions/_shared/credit_logic.ts
+  h_709d285d7429c5 1-82
+supabase/functions/reward-ad/index.ts
+  h_709d285d7429c5 1-512
+.agents/workflows/debug.md
+  h_709d285d7429c5 1-103
+docs/plans/2026-03-16-p0-store-submission.md
+  h_709d285d7429c5 1-283
+.agent/.shared/ui-ux-pro-max/data/colors.csv
+  h_709d285d7429c5 1-97
+lib/features/create/presentation/widgets/model_selector.dart
+  h_709d285d7429c5 1-25
+supabase/migrations/20260220180000_concurrency_locks.sql
+  h_709d285d7429c5 1-9
+test/widget_test.dart
+  h_709d285d7429c5 1-17
+test/shared/widgets/aspect_ratio_selector_test.dart
+  h_709d285d7429c5 1-79
+.agents/agents/orchestrator.md
+  h_709d285d7429c5 1-416
+lib/features/template_engine/presentation/view_models/generation_view_model.g.dart
+  h_709d285d7429c5 1-31
+.agents/agents/penetration-tester.md
+  h_709d285d7429c5 1-188
+windows/runner/flutter_window.cpp
+  h_709d285d7429c5 1-71
+supabase/migrations/20260128000000_create_profiles_table.sql
+  h_709d285d7429c5 1-49
+integration_test/generation_flow_test.dart
+  h_709d285d7429c5 1-82
+.agent/skills/code-review-checklist/SKILL.md
+  h_709d285d7429c5 1-109
+supabase/functions/deno.json
+  h_709d285d7429c5 1-6
+lib/features/auth/presentation/state/auth_state.dart
+  h_709d285d7429c5 1-14
+test/core/services/rewarded_ad_service_test.dart
+  h_709d285d7429c5 1-32
+.agents/agents/test-engineer.md
+  h_709d285d7429c5 1-158
+android/gradle/wrapper/gradle-wrapper.properties
+  h_709d285d7429c5 1-5
+.agent/skills/nextjs-react-expert/1-async-eliminating-waterfalls.md
+  h_709d285d7429c5 1-312
+.agent/skills/analytics-tracking/SKILL.md
+  h_709d285d7429c5 1-309
+lib/core/services/image_upload_service.g.dart
+  h_709d285d7429c5 1-29
+.agents/skills/database-design/scripts/schema_validator.py
+  h_709d285d7429c5 1-172
+test/features/settings/presentation/providers/theme_provider_test.dart
+  h_709d285d7429c5 1-76
+.agent/skills/red-team-tactics/SKILL.md
+  h_709d285d7429c5 1-199
+.metadata
+  h_709d285d7429c5 1-39
+.agents/skills/game-development/SKILL.md
+  h_709d285d7429c5 1-167
+.agent/workflows/enhance.md
+  h_709d285d7429c5 1-63
+.agents/skills/api-patterns/SKILL.md
+  h_709d285d7429c5 1-81
+lib/features/credits/domain/entities/credit_transaction.g.dart
+  h_709d285d7429c5 1-31
+test/core/exceptions/app_exception_test.dart
+  h_709d285d7429c5 1-118
+lib/features/create/presentation/view_models/create_view_model.g.dart
+  h_709d285d7429c5 1-30
+android/gradle.properties
+  h_709d285d7429c5 1-4
+.agent/skills/google-play-publishing/SKILL.md
+  h_709d285d7429c5 1-114
+.agent/workflows/create.md
+  h_709d285d7429c5 1-59
+.agent/skills/vulnerability-scanner/checklists.md
+  h_709d285d7429c5 1-121
+lib/core/widgets/bottom_sheet_body.dart
+  h_709d285d7429c5 1-36
+.agent/skills/game-development/multiplayer/SKILL.md
+  h_709d285d7429c5 1-132
+.agent/skills/mobile-design/mobile-navigation.md
+  h_709d285d7429c5 1-458
+supabase/migrations/20260218000000_create_credit_system.sql
+  h_709d285d7429c5 1-176
+.agents/agents/product-manager.md
+  h_709d285d7429c5 1-112
+.agent/.shared/ui-ux-pro-max/data/ui-reasoning.csv
+  h_709d285d7429c5 1-101
+.agents/agents/debugger.md
+  h_709d285d7429c5 1-225
+.agents/skills/documentation-templates/SKILL.md
+  h_709d285d7429c5 1-194
+.agent/skills/google-play-publishing/data-types-matrix.md
+  h_709d285d7429c5 1-83
+.agents/skills/in-app-purchases/platforms.md
+  h_709d285d7429c5 1-213
+test/features/credits/data/repositories/credit_repository_test.dart
+  h_709d285d7429c5 1-239
+windows/runner/runner.exe.manifest
+  h_709d285d7429c5 1-14
+.agents/skills/nextjs-react-expert/SKILL.md
+  h_709d285d7429c5 1-286
+admin/lib/features/templates/domain/entities/admin_template_model.g.dart
+  h_709d285d7429c5 1-51
+.agents/.shared/ui-ux-pro-max/data/ui-reasoning.csv
+  h_709d285d7429c5 1-101
+test/shared/widgets/error_illustration_test.dart
+  h_709d285d7429c5 1-37
+test/features/template_engine/presentation/screens/home_screen_test.dart
+  h_709d285d7429c5 1-327
+web/manifest.json
+  h_709d285d7429c5 1-35
+.agent/skills/api-patterns/graphql.md
+  h_709d285d7429c5 1-41
+.agents/skills/mobile-design/touch-psychology.md
+  h_709d285d7429c5 1-537
+.agents/.shared/ui-ux-pro-max/data/stacks/react-native.csv
+  h_709d285d7429c5 1-52
+test/features/template_engine/domain/entities/generation_job_model_test.dart
+  h_709d285d7429c5 1-205
+.agents/.shared/ui-ux-pro-max/scripts/design_system.py
+  h_709d285d7429c5 1-1067
+ios/Podfile.lock
+  h_709d285d7429c5 1-134
+.agents/skills/google-play-publishing/data-types-matrix.md
+  h_709d285d7429c5 1-83
+test/features/credits/presentation/widgets/insufficient_credits_sheet_test.dart
+  h_709d285d7429c5 1-112
+.agent/.shared/ui-ux-pro-max/data/stacks/nuxtjs.csv
+  h_709d285d7429c5 1-59
+test/features/subscription/presentation/screens/paywall_screen_test.dart
+  h_709d285d7429c5 1-605
+docs/2026-08-22-supabase-keepalive-and-github-audit.md
+  h_709d285d7429c5 1-46
+.agent/skills/nextjs-react-expert/7-js-javascript-performance.md
+  h_709d285d7429c5 1-684
+.agents/workflows/ui-ux-pro-max.md
+  h_709d285d7429c5 1-296
+CONTEXT.md
+  h_709d285d7429c5 1-82
+.agent/skills/analytics-tracking/references/event-library.md
+  h_709d285d7429c5 1-260
+android/app/build.gradle.kts
+  h_709d285d7429c5 1-58
+lib/features/gallery/presentation/widgets/interactive_gallery_item.dart
+  h_709d285d7429c5 1-530
+.agent/skills/game-development/mobile-games/SKILL.md
+  h_709d285d7429c5 1-108
+.agent/skills/frontend-design/color-system.md
+  h_709d285d7429c5 1-311
+lib/features/gallery/presentation/widgets/image_viewer_image_page.dart
+  h_709d285d7429c5 1-172
+.agent/skills/mobile-design/mobile-backend.md
+  h_709d285d7429c5 1-491
+docs/plans/2026-03-25-iap-skill-update-plan.md
+  h_709d285d7429c5 1-373
+.agents/skills/lint-and-validate/scripts/type_coverage.py
+  h_709d285d7429c5 1-173
+lib/features/credits/presentation/providers/ad_reward_provider.dart
+  h_709d285d7429c5 1-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "34d2a0278a17805437074521139adfef5d6ecffc",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
