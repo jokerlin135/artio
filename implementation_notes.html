@@ -17,13 +17,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>🚀 Artio — Implementation Notes (Updated 2026-08-29)</h1>
+    <h1>🚀 Artio — Implementation Notes & Production Readiness</h1>
     <p>Living spec & decision tracking document for Artio AI Art SaaS.</p>
     
-    <h2>1. Behavioral Model Bug Fixes (2026-08-29)</h2>
+    <h2>1. Supabase Edge Functions Deployment (2026-08-29)</h2>
+    <p>All 6 Edge Functions deployed to project <code>gbmemcsxkqdhzlxivopj</code> with <code>--no-verify-jwt</code>:</p>
     <ul>
-      <li><strong>Fix 1 (Template Insufficient Credits Sheet):</strong> Updated <code>GenerationViewModel</code> to throw structured <code>AppException.payment(message: ..., code: 'insufficient_credits')</code> when policy denies due to credit constraints. Synchronizes behavior with <code>CreateViewModel</code>, allowing <code>TemplateDetailScreen</code> to properly trigger the <code>_showInsufficientCreditsSheet()</code>.</li>
-      <li><strong>Fix 2 (ImageViewer Timer Management):</strong> Introduced managed <code>Timer? _indicatorTimer</code> in <code>ImageViewerPage</code> with proper cancellation on rapid page swipes and widget disposal to avoid overlapping fade animations.</li>
+      <li><code>generate-image</code> — Multi-model AI image generation orchestration (Gemini & Kie).</li>
+      <li><code>reward-ad</code> — AdMob server-side nonce verification & credit grant.</li>
+      <li><code>delete-account</code> — GDPR/Play Store compliant account deletion cascade.</li>
+      <li><code>verify-google-purchase</code> — Google Play IAP direct receipt validation.</li>
+      <li><code>sync-subscription</code> — RevenueCat subscription sync.</li>
+      <li><code>revenuecat-webhook</code> — Realtime webhook handler for subscription lifecycle events.</li>
     </ul>
 
     <h2>2. Verification & Metrics</h2>
@@ -32,6 +37,7 @@
         <tr><th>Hạng mục</th><th>Kết quả</th><th>Chi tiết</th></tr>
       </thead>
       <tbody>
+        <tr><td>6 Edge Functions</td><td><span class="badge-pass">DEPLOYED</span></td><td>Deployed on Supabase project <code>gbmemcsxkqdhzlxivopj</code></td></tr>
         <tr><td>Mobile Tests</td><td><span class="badge-pass">PASS</span></td><td>759 / 759 tests pass (100%)</td></tr>
         <tr><td>Admin Tests</td><td><span class="badge-pass">PASS</span></td><td>14 / 14 tests pass (100%)</td></tr>
         <tr><td>Flutter Analyze</td><td><span class="badge-pass">0 Issues</span></td><td>0 warnings / errors across mobile and admin</td></tr>
