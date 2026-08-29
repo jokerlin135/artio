@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:artio/core/design_system/app_animations.dart';
 import 'package:artio/core/exceptions/app_exception.dart';
 import 'package:artio/core/services/haptic_service.dart';
@@ -43,6 +45,7 @@ class _ImageViewerPageState extends ConsumerState<ImageViewerPage>
   bool _showInfo = false;
   double _dragOffset = 0;
   bool _isDragging = false;
+  Timer? _indicatorTimer;
   late final AnimationController _indicatorController;
   late final Animation<double> _indicatorOpacity;
 
@@ -63,8 +66,9 @@ class _ImageViewerPageState extends ConsumerState<ImageViewerPage>
   }
 
   void _resetIndicatorTimer() {
+    _indicatorTimer?.cancel();
     _indicatorController.reverse();
-    Future.delayed(const Duration(seconds: 3), () {
+    _indicatorTimer = Timer(const Duration(seconds: 3), () {
       if (mounted && !_isDragging) {
         _indicatorController.forward();
       }
@@ -73,6 +77,7 @@ class _ImageViewerPageState extends ConsumerState<ImageViewerPage>
 
   @override
   void dispose() {
+    _indicatorTimer?.cancel();
     _pageController.dispose();
     _indicatorController.dispose();
     super.dispose();

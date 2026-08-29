@@ -61,8 +61,21 @@ class GenerationViewModel extends _$GenerationViewModel {
       );
 
       if (eligibility.isDenied) {
+        final reason = eligibility.denialReason ?? '';
+        final isCreditError =
+            reason.toLowerCase().contains('credit') ||
+            reason.toLowerCase().contains('insufficient');
         state = AsyncError(
-          Exception(eligibility.denialReason ?? 'Generation not allowed'),
+          isCreditError
+              ? AppException.payment(
+                  message: reason.isNotEmpty ? reason : 'Insufficient credits',
+                  code: 'insufficient_credits',
+                )
+              : AppException.generation(
+                  message: reason.isNotEmpty
+                      ? reason
+                      : 'Generation not allowed',
+                ),
           StackTrace.current,
         );
         return;
@@ -90,9 +103,10 @@ class GenerationViewModel extends _$GenerationViewModel {
         },
         onError: (e, st) => state = AsyncError(e, st),
         onTimeout: () => state = AsyncError(
-          Exception(
-            'Generation timed out after '
-            '${GenerationJobManager.defaultTimeoutMinutes} minutes',
+          const AppException.generation(
+            message:
+                'Generation timed out after '
+                '${GenerationJobManager.defaultTimeoutMinutes} minutes',
           ),
           StackTrace.current,
         ),

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:artio/core/exceptions/app_exception.dart';
 import 'package:artio/features/template_engine/data/repositories/generation_repository.dart';
 import 'package:artio/features/template_engine/domain/entities/generation_job_model.dart';
 import 'package:artio/features/template_engine/domain/policies/generation_policy.dart';
@@ -154,7 +155,7 @@ void main() {
         ).called(1);
       });
 
-      test('sets error state when policy denies generation', () async {
+      test('sets PaymentException when policy denies due to credits', () async {
         when(
           () => mockPolicy.canGenerate(
             userId: any(named: 'userId'),
@@ -162,7 +163,7 @@ void main() {
           ),
         ).thenAnswer(
           (_) async => const GenerationEligibility.denied(
-            reason: 'No credits remaining',
+            reason: 'Insufficient credits',
           ),
         );
 
@@ -178,6 +179,42 @@ void main() {
 
         final state = container.read(generationViewModelProvider);
         expect(state.hasError, true);
+        expect(state.error, isA<PaymentException>());
+        expect(
+          (state.error! as PaymentException).code,
+          'insufficient_credits',
+        );
+      });
+
+      test('sets GenerationException when policy denies due to other reason', () async {
+        when(
+          () => mockPolicy.canGenerate(
+            userId: any(named: 'userId'),
+            templateId: any(named: 'templateId'),
+          ),
+        ).thenAnswer(
+          (_) async => const GenerationEligibility.denied(
+            reason: 'Template is inactive',
+          ),
+        );
+
+        container = createContainer();
+
+        await container
+            .read(generationViewModelProvider.notifier)
+            .generate(
+              templateId: 'template-1',
+              prompt: 'A beautiful landscape',
+              userId: 'user-123',
+            );
+
+        final state = container.read(generationViewModelProvider);
+        expect(state.hasError, true);
+        expect(state.error, isA<GenerationException>());
+        expect(
+          (state.error! as GenerationException).message,
+          'Template is inactive',
+        );
       });
 
       test('sets error state when repository throws', () async {
