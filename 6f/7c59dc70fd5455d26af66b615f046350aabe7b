@@ -1,0 +1,32 @@
+.agent/skills/behavior-model-debugger/SKILL.md
+  h_709d285d7429c5 1-155
+.agent/skills/keeping-supabase-alive/SKILL.md
+  h_709d285d7429c5 1-159
+.agent/skills/vibe-engineering-workflow/SKILL.md
+  h_709d285d7429c5 1-84
+.agent/skills/vibe-git-manager/SKILL.md
+  h_709d285d7429c5 1-131
+.agents/skills/behavior-model-debugger/SKILL.md
+  h_709d285d7429c5 1-155
+.agents/skills/keeping-supabase-alive/SKILL.md
+  h_709d285d7429c5 1-159
+.agents/skills/vibe-engineering-workflow/SKILL.md
+  h_709d285d7429c5 1-84
+.agents/skills/vibe-git-manager/SKILL.md
+  h_709d285d7429c5 1-131
+CONTEXT.md
+  h_709d285d7429c5 3,24,33-36
+scripts/setup_cronjob_keepalive.py
+  h_709d285d7429c5 1-115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "6f7c59dc70fd5455d26af66b615f046350aabe7b",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
