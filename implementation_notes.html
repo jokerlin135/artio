@@ -17,37 +17,42 @@
 </head>
 <body>
   <div class="container">
-    <h1>🚀 Artio — Implementation Notes (2026-08-22)</h1>
+    <h1>🚀 Artio — Implementation Notes (Updated 2026-08-29)</h1>
     <p>Living spec & decision tracking document for Artio AI Art SaaS.</p>
     
-    <h2>1. Unspecified & Implicit Decisions</h2>
+    <h2>1. Cron-job.org Keep-Alive 24/7 Architecture</h2>
     <ul>
-      <li><strong>GitHub Remote & CI/CD:</strong> Linked local workspace to <code>https://github.com/jokerlin135/artio.git</code> with automated secrets provisioning (<code>SUPABASE_URL</code>, <code>SUPABASE_ANON_KEY</code>).</li>
-      <li><strong>Supabase Keep-Alive Architecture:</strong> Upgraded from single root ping to 3-tier keep-alive ping (Auth + REST Gateway + DB Table Query <code>templates?limit=1</code>) every 4 days to prevent PostgreSQL auto-pause on Supabase Free Tier.</li>
-      <li><strong>Package Name:</strong> Standardized application package across <code>build.gradle.kts</code>, <code>AndroidManifest.xml</code>, and <code>CONTEXT.md</code> to <code>com.artio.artio</code>.</li>
+      <li><strong>Primary Keep-Alive:</strong> Configured 2 cron jobs via <code>https://api.cron-job.org/jobs</code> using <code>CRONJOB_API</code> from <code>~/.zshrc</code>:
+        <ul>
+          <li><code>Artio - Supabase PostgreSQL DB Keep-Alive</code> (Job ID: <code>8347394</code>) — Executes query against <code>/rest/v1/templates?select=id&limit=1</code> every 4 hours (00:15, 04:15, 08:15, 12:15, 16:15, 20:15).</li>
+          <li><code>Artio - Supabase Auth Service Ping</code> (Job ID: <code>8347395</code>) — Queries <code>/auth/v1/settings</code> every 6 hours (02:30, 08:30, 14:30, 20:30).</li>
+        </ul>
+      </li>
+      <li><strong>Why cron-job.org over GitHub Actions:</strong> GitHub Actions disables scheduled workflows after 60 days of repository inactivity. cron-job.org runs 24/7/365 independently without repo commit requirements.</li>
     </ul>
 
-    <h2>2. Verification & Test Metrics</h2>
+    <h2>2. Project Skills Added</h2>
+    <ul>
+      <li><code>vibe-engineering-workflow</code>: Vibe coding and iterative execution standards.</li>
+      <li><code>vibe-git-manager</code>: Safe atomic git commits and branch management.</li>
+      <li><code>behavior-model-debugger</code>: AI agent and model behavior diagnostics.</li>
+      <li><code>keeping-supabase-alive</code>: Multi-project cron-job.org keep-alive management.</li>
+    </ul>
+
+    <h2>3. Verification & Metrics</h2>
     <table>
       <thead>
         <tr><th>Hạng mục</th><th>Kết quả</th><th>Chi tiết</th></tr>
       </thead>
       <tbody>
+        <tr><td>cron-job.org DB Wakeup</td><td><span class="badge-pass">ACTIVE</span></td><td>Job <code>8347394</code> registered & verified (HTTP 200)</td></tr>
+        <tr><td>cron-job.org Auth Ping</td><td><span class="badge-pass">ACTIVE</span></td><td>Job <code>8347395</code> registered & verified (HTTP 200)</td></tr>
         <tr><td>Mobile Tests</td><td><span class="badge-pass">PASS</span></td><td>758 / 758 tests pass (100%)</td></tr>
         <tr><td>Admin Tests</td><td><span class="badge-pass">PASS</span></td><td>14 / 14 tests pass (100%)</td></tr>
         <tr><td>Flutter Analyze</td><td><span class="badge-pass">0 Issues</span></td><td>0 warnings / errors across mobile and admin</td></tr>
         <tr><td>Supabase DB</td><td><span class="badge-pass">HEALTHY</span></td><td>38 Templates live on <code>gbmemcsxkqdhzlxivopj</code></td></tr>
-        <tr><td>GitHub Secrets</td><td><span class="badge-pass">CONFIGURED</span></td><td><code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code> set</td></tr>
       </tbody>
     </table>
-
-    <h2>3. Maintenance & Release Next Steps</h2>
-    <ol>
-      <li>Deploy 6 Supabase Edge Functions with <code>--no-verify-jwt</code> and server secrets.</li>
-      <li>Create 4 In-App Subscriptions on Google Play Console (<code>artio_pro_monthly</code>, <code>artio_pro_yearly</code>, <code>artio_ultra_monthly</code>, <code>artio_ultra_yearly</code>).</li>
-      <li>Upload Service Account JSON <code>artio-revenuecat-2026-dbb0b33e49f9.json</code> to RevenueCat Dashboard.</li>
-      <li>Build production AAB with <code>make build-android</code>.</li>
-    </ol>
   </div>
 </body>
 </html>
