@@ -1,6 +1,6 @@
 # 📌 Artio Project — System Context & Living Spec (CONTEXT.md)
 
-> **Cập nhật lần cuối:** 2026-08-22 (GitHub Secrets, Remote Linking & 3-Tier Keep-Alive Setup)  
+> **Cập nhật lần cuối:** 2026-08-29 (cron-job.org Keep-Alive 24/7 & Project Skills Added)  
 > **Workspace:** `/Users/mini4/bydone/newartio`  
 > **Package Name:** `com.artio.artio`  
 > **GitHub Remote:** `https://github.com/jokerlin135/artio.git`  
@@ -21,7 +21,7 @@
 
 ---
 
-## 2. ⚡ Tài nguyên Supabase & CI/CD Đã Thiết Lập
+## 2. ⚡ Tài nguyên Supabase & CI/CD / Keep-Alive Đã Thiết Lập
 
 * **Tài khoản Supabase:** `acc4` (`olivia.davis.9752013c@monet.uno`)
 * **Project Ref:** `gbmemcsxkqdhzlxivopj` (`msupa-prod-a`)
@@ -30,7 +30,10 @@
 * **Direct DB Host:** `db.gbmemcsxkqdhzlxivopj.supabase.co:5432`
 * **AWS Pooler Host:** `aws-0-ap-southeast-1.pooler.supabase.com:6543` (Transaction) / `5432` (Session)
 * **GitHub Repository:** `jokerlin135/artio` (Đã cấu hình GitHub Secrets `SUPABASE_URL` và `SUPABASE_ANON_KEY`).
-* **Supabase Keep-Alive:** Workflow `.github/workflows/supabase-keepalive.yml` đã được nâng cấp theo chuẩn 3 tầng (Auth + REST + Query bảng thật `templates?limit=1`).
+* **Cron-job.org Keep-Alive (Chính):**
+  * Job 1 (DB Wakeup): ID `8347394` — `Artio - Supabase PostgreSQL DB Keep-Alive` (Query `/rest/v1/templates?select=id&limit=1` mỗi 4 giờ lúc 00:15, 04:15, 08:15, 12:15, 16:15, 20:15).
+  * Job 2 (Auth Ping): ID `8347395` — `Artio - Supabase Auth Service Ping` (Query `/auth/v1/settings` mỗi 6 giờ lúc 02:30, 08:30, 14:30, 20:30).
+* **GitHub Actions Keep-Alive (Dự phòng):** `.github/workflows/supabase-keepalive.yml` chạy mỗi 4 ngày.
 
 ### Database Schema Đã Deploy:
 1. `templates`: Đã nạp đầy đủ **38 AI Art Templates** (Cyberpunk, Anime, Vintage, Oil Painting, 3D Render, v.v.).
