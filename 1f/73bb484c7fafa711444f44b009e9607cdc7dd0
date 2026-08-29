@@ -1,0 +1,18 @@
+lib/features/gallery/presentation/pages/image_viewer_page.dart
+  h_709d285d7429c5 1-2,48,69,71,80
+lib/features/template_engine/presentation/view_models/generation_view_model.dart
+  h_709d285d7429c5 64-67,69-78,106-109
+test/features/template_engine/presentation/view_models/generation_view_model_test.dart
+  h_709d285d7429c5 3,158,166,182-217
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "1f73bb484c7fafa711444f44b009e9607cdc7dd0",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
