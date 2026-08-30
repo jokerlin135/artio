@@ -1,8 +1,8 @@
 # 📌 Artio Project — System Context & Living Spec (CONTEXT.md)
 
-> **Cập nhật lần cuối:** 2026-08-29 (cron-job.org Keep-Alive 24/7 & Project Skills Added)  
+> **Cập nhật lần cuối:** 2026-08-30 (Package Name Renamed to com.newmailabs.artio & A53 Build Ready)  
 > **Workspace:** `/Users/mini4/bydone/newartio`  
-> **Package Name:** `com.artio.artio`  
+> **Package Name:** `com.newmailabs.artio`  
 > **GitHub Remote:** `https://github.com/jokerlin135/artio.git`  
 > **Phiên bản:** 1.0.0+18  
 
@@ -60,16 +60,16 @@
 
 ---
 
-## 4. ❌ Tính năng Cần Hoàn Thiện Tiếp theo & Rủi ro Tiềm ẩn
+## 4. ❌ Các Bước Xuất Xưởng Cần Hoàn Thiện Tiếp Theo
 
-### 🔴 P0 — Blocking Release (Cần làm trước khi xuất xưởng):
-1. **Deploy Supabase Edge Functions:** Deploy 6 functions (`generate-image`, `reward-ad`, `delete-account`, `sync-subscription`, `verify-google-purchase`, `revenuecat-webhook`) lên project `gbmemcsxkqdhzlxivopj` và set Edge Secrets.
-2. **Google Play Console App & Subscriptions:** Tạo App ID `com.artio.artio` và tạo 4 Subscription Products (`artio_pro_monthly`, `artio_pro_yearly`, `artio_ultra_monthly`, `artio_ultra_yearly`).
-3. **RevenueCat ↔ Google Play Link:** Upload Service Account JSON (`artio-revenuecat-2026-dbb0b33e49f9.json`) vào RevenueCat Dashboard để kết nối Google Play Billing.
+### 🔴 P0 — Blocking Release (Dashboard Actions):
+1. **Deploy Supabase Edge Functions:** ✅ ĐÃ HOÀN THÀNH — Đã deploy 6 functions (`generate-image`, `reward-ad`, `delete-account`, `sync-subscription`, `verify-google-purchase`, `revenuecat-webhook`) lên project `gbmemcsxkqdhzlxivopj` với `--no-verify-jwt` và set Edge Secrets.
+2. **Google Play Console App & Subscriptions:** Tạo App ID `com.newmailabs.artio` và tạo 4 Subscription Products (`artio_pro_monthly`, `artio_pro_yearly`, `artio_ultra_monthly`, `artio_ultra_yearly`).
+3. **RevenueCat ↔ Google Play Link:** Upload Service Account JSON (`artio-revenuecat-2026-dbb0b33e49f9.json`) vào RevenueCat Dashboard để kết nối Google Play Billing cho App `com.newmailabs.artio`.
 
 ### ⚠️ Rủi ro & Chiến lược Phòng ngừa (Risk & Mitigation):
 * **Rủi ro Supabase Free-Tier Auto-Pause (7 ngày inactive):**
-  * *Giải pháp:* Đã thiết lập GitHub Actions Workflow `supabase-keepalive.yml` query bảng thật `templates` mỗi 4 ngày.
+  * *Giải pháp:* ✅ Đã cấu hình 2 Cron Jobs độc lập trên `console.cron-job.org` (Job `8347394` & `8347395`) query trực tiếp bảng `templates` và Auth service 24/7/365.
 * **Rủi ro rò rỉ Service Role Key:**
   * *Giải pháp:* `SUPABASE_SERVICE_ROLE_KEY` chỉ cấu hình trong Supabase Edge Functions Secrets, tuyệt đối không đưa vào client mobile bundle.
 

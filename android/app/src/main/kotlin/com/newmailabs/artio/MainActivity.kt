@@ -1,4 +1,4 @@
-package com.artio.artio
+package com.newmailabs.artio
 
 import io.flutter.embedding.android.FlutterActivity
 

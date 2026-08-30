@@ -20,7 +20,14 @@
     <h1>🚀 Artio — Implementation Notes & Production Readiness</h1>
     <p>Living spec & decision tracking document for Artio AI Art SaaS.</p>
     
-    <h2>1. Supabase Edge Functions Deployment (2026-08-29)</h2>
+    <h2>1. Package Name Migration & Device Installation (2026-08-30)</h2>
+    <ul>
+      <li><strong>Package Name:</strong> Successfully migrated from <code>com.artio.artio</code> to <code>com.newmailabs.artio</code> across Android (build.gradle.kts, AndroidManifest.xml, Kotlin MainActivity) and iOS (project.pbxproj).</li>
+      <li><strong>Gradle Build Fixes:</strong> Fixed AGP 8.11 / Java 17 <code>JdkImageTransform</code> and enforced Kotlin 1.8 compatibility for library plugins.</li>
+      <li><strong>Samsung A53 Deployment:</strong> Built <code>app-debug.apk</code> and installed directly to Samsung Galaxy A53 5G (<code>SM A536E</code>) via Wireless ADB.</li>
+    </ul>
+
+    <h2>2. Supabase Edge Functions Deployment (2026-08-29)</h2>
     <p>All 6 Edge Functions deployed to project <code>gbmemcsxkqdhzlxivopj</code> with <code>--no-verify-jwt</code>:</p>
     <ul>
       <li><code>generate-image</code> — Multi-model AI image generation orchestration (Gemini & Kie).</li>
@@ -31,16 +38,16 @@
       <li><code>revenuecat-webhook</code> — Realtime webhook handler for subscription lifecycle events.</li>
     </ul>
 
-    <h2>2. Verification & Metrics</h2>
+    <h2>3. Verification & Metrics</h2>
     <table>
       <thead>
         <tr><th>Hạng mục</th><th>Kết quả</th><th>Chi tiết</th></tr>
       </thead>
       <tbody>
+        <tr><td>Package Name</td><td><span class="badge-pass">com.newmailabs.artio</span></td><td>Android + iOS + Manifest synced</td></tr>
+        <tr><td>Device Install (A53)</td><td><span class="badge-pass">SUCCESS</span></td><td>Installed & launched on SM A536E</td></tr>
         <tr><td>6 Edge Functions</td><td><span class="badge-pass">DEPLOYED</span></td><td>Deployed on Supabase project <code>gbmemcsxkqdhzlxivopj</code></td></tr>
-        <tr><td>Mobile Tests</td><td><span class="badge-pass">PASS</span></td><td>759 / 759 tests pass (100%)</td></tr>
-        <tr><td>Admin Tests</td><td><span class="badge-pass">PASS</span></td><td>14 / 14 tests pass (100%)</td></tr>
-        <tr><td>Flutter Analyze</td><td><span class="badge-pass">0 Issues</span></td><td>0 warnings / errors across mobile and admin</td></tr>
+        <tr><td>Flutter Analyze</td><td><span class="badge-pass">0 Issues</span></td><td>0 warnings / errors across codebase</td></tr>
         <tr><td>cron-job.org DB Wakeup</td><td><span class="badge-pass">ACTIVE</span></td><td>Job <code>8347394</code> verified (HTTP 200)</td></tr>
         <tr><td>cron-job.org Auth Ping</td><td><span class="badge-pass">ACTIVE</span></td><td>Job <code>8347395</code> verified (HTTP 200)</td></tr>
       </tbody>
