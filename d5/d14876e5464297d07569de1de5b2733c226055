@@ -1,0 +1,28 @@
+CONTEXT.md
+  h_709d285d7429c5 3,5,63,65-68,72
+android/app/build.gradle.kts
+  h_709d285d7429c5 16,31
+android/app/src/main/AndroidManifest.xml
+  h_709d285d7429c5 37
+android/app/src/main/kotlin/com/newmailabs/artio/MainActivity.kt
+  h_709d285d7429c5 1
+android/build.gradle.kts
+  h_709d285d7429c5 29-35,38
+docs/2026-08-30-package-rename-audit-and-a53-deploy.md
+  h_709d285d7429c5 1-68
+implementation_notes.html
+  h_709d285d7429c5 23-30,41,47-48,50
+ios/Runner.xcodeproj/project.pbxproj
+  h_709d285d7429c5 498,515,533,549,680,702
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "d5d14876e5464297d07569de1de5b2733c226055",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
