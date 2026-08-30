@@ -1,0 +1,14 @@
+docs/2026-08-30-handoff-premium-ui-and-phase-roadmap.md
+  h_709d285d7429c5 1-100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "2043dd38a13d6a5eafe65c428516139439f9a6c4",
+  "prompts": {},
+  "humans": {
+    "h_709d285d7429c5": {
+      "author": "jokerlin135 <jokerlin135@gmail.com>"
+    }
+  }
+}
